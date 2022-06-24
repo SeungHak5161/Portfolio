@@ -31,13 +31,16 @@ header {
 #description-article {
   position: relative;
   width: 80vw;
+  margin: 1rem auto;
   background-color: #e7e9eb;
 }
 #description-p {
+  width: 70vw;
+  margin: auto;
   font-size: 1rem;
   color: black;
   text-align: left;
-  padding: 1rem 0rem 1rem 4rem;
+  padding: 1rem 0rem;
 }
 
 #main-app {
