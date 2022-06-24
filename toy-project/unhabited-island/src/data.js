@@ -1,4 +1,4 @@
-const data = [
+export const dataList = [
   {
     name: "전자레인지, 전자레인지용 식품(편의점 냉동칸 수준)",
     point: "2",

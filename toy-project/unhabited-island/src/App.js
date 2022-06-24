@@ -1,9 +1,11 @@
 import "./Style/main.css";
 import { useEffect, useState } from "react";
 import MainApp from "./Component/MainApp";
+import { dataList } from "./data.js";
+import ControlBar from "./Component/ControlBar";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(dataList);
   return (
     <div className="App">
       <header>
@@ -24,7 +26,9 @@ function App() {
         </article>
         <section id="main-app">
           <MainApp data={data} onClick={() => {}} />
-          <section id="control-bar"></section>
+          <section id="control-bar">
+            <ControlBar />
+          </section>
         </section>
       </main>
     </div>
