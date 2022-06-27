@@ -3,9 +3,18 @@ import { useEffect, useState } from "react";
 import MainApp from "./Component/MainApp";
 import { dataList } from "./data.js";
 import ControlBar from "./Component/ControlBar";
+import _ from "lodash";
 
 function App() {
+  const initialData = _.cloneDeep(dataList);
   const [data, setData] = useState(dataList);
+  const [count, setCount] = useState(parseInt(0));
+  const [reset, setReset] = useState(false);
+  useEffect(() => {
+    setReset(false);
+    setData(initialData);
+    setCount(0);
+  }, [reset]);
   return (
     <div className="App">
       <header>
@@ -25,9 +34,32 @@ function App() {
           </p>
         </article>
         <section id="main-app">
-          <MainApp data={data} onClick={() => {}} />
+          <MainApp
+            data={data}
+            onClick={(idx) => {
+              const newData = data;
+              let point = count;
+              if (newData[idx].isChecked) {
+                newData[idx].isChecked = !newData[idx].isChecked;
+                point -= parseInt(newData[idx].point);
+                setCount(point);
+                setData(newData);
+              } else {
+                newData[idx].isChecked = !newData[idx].isChecked;
+                point += parseInt(newData[idx].point);
+                setCount(point);
+                setData(newData);
+              }
+            }}
+          />
           <section id="control-bar">
-            <ControlBar />
+            <ControlBar
+              data={data}
+              count={count}
+              onReset={() => {
+                setReset(true);
+              }}
+            />
           </section>
         </section>
       </main>

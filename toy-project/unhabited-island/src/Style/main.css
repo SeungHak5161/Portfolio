@@ -58,19 +58,35 @@ header {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  background-color: lightblue;
 }
 .table-elm {
+  position: relative;
   width: 10vw;
   height: 10vw;
-  background-color: #e7e9eb;
   margin: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.table-elm-name {
+.table-elm-img {
+  display: block;
+  margin: 1rem auto 0px;
+  height: 50%;
+  /* object-fit: cover; */
+}
+.table-elm-content {
+  margin-top: 0.5rem;
   font-size: 0.8rem;
+  line-height: 110%;
+  font-weight: 500;
 }
 .table-elm-point {
+  position: absolute;
+  top: 0;
+  left: 0;
   font-weight: 900;
+  background-color: #ff999966;
 }
 /* control-bar */
 #control-bar-container {

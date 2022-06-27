@@ -1,31 +1,54 @@
 import React from "react";
 
 export default function MainApp(props) {
-  const data = props.data;
-  const onClick = props.onClick;
+  let style = { backgroundColor: "#ff999966" };
   return (
     <>
-      {/* {data.map(({ name }, index) => (
-        <div className="table-elm" data-idx={index}>
-          {name}
-        </div>
-      ))} */}
       <div id="main-app-table">
-        {/* <thead></thead> */}
-        {data.map(({ name, img, point }, index) => (
-          <div
-            className="table-elm"
-            key={index}
-            data-idx={index}
-            onClick={() => {
-              onClick();
-            }}
-          >
-            <img src={img} alt={""} />
-            <div className="table-elm-point">{point + " Point"}</div>
-            <div className="table-elm-name">{name}</div>
-          </div>
-        ))}
+        {props.data.map(({ name, content, point, isChecked }, index) =>
+          isChecked ? (
+            <div
+              style={style}
+              className="table-elm"
+              key={index}
+              data-idx={index}
+              onClick={(e) => {
+                const idx = parseInt(
+                  e.target.closest(".table-elm").dataset.idx
+                );
+                props.onClick(idx);
+              }}
+            >
+              <img
+                className="table-elm-img"
+                src={require("../Assets/Images/Photos/" + name + ".png")}
+                alt={name}
+              />
+              <div className="table-elm-point">{point + " Point"}</div>
+              <div className="table-elm-content">{content}</div>
+            </div>
+          ) : (
+            <div
+              className="table-elm"
+              key={index}
+              data-idx={index}
+              onClick={(e) => {
+                const idx = parseInt(
+                  e.target.closest(".table-elm").dataset.idx
+                );
+                props.onClick(idx);
+              }}
+            >
+              <img
+                className="table-elm-img"
+                src={require("../Assets/Images/Photos/" + name + ".png")}
+                alt={name}
+              />
+              <div className="table-elm-point">{point + " Point"}</div>
+              <div className="table-elm-content">{content}</div>
+            </div>
+          )
+        )}
       </div>
     </>
   );
