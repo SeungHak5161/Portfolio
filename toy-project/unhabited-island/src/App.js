@@ -8,6 +8,7 @@ import html2canvas from "html2canvas";
 
 function App() {
   const initialData = _.cloneDeep(dataList);
+  useEffect(() => {});
   const [data, setData] = useState(dataList);
   const [count, setCount] = useState(parseInt(0));
   const [reset, setReset] = useState(false);
@@ -15,7 +16,7 @@ function App() {
     setReset(false);
     setData(initialData);
     setCount(0);
-  }, [reset, initialData]);
+  }, [reset]);
   return (
     <div className="App">
       <header>
