@@ -1,5 +1,5 @@
 import "./Style/main.css";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import MainApp from "./Component/MainApp";
 import { dataList } from "./data.js";
 import ControlBar from "./Component/ControlBar";
@@ -12,9 +12,12 @@ function App() {
   const [data, setData] = useState(dataList);
   const [count, setCount] = useState(parseInt(0));
   const [reset, setReset] = useState(false);
+
+  const resetData = useCallback(() => setData(initialData), [initialData]);
+
   useEffect(() => {
     setReset(false);
-    setData(initialData);
+    resetData();
     setCount(0);
   }, [reset]);
   return (
