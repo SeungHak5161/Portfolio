@@ -5,6 +5,7 @@ export default function MainApp(props) {
   return (
     <>
       <div id="main-app-table">
+        <div id="sum-point">총합 : {props.count}</div>
         {props.data.map(({ name, content, point, isChecked }, index) =>
           isChecked ? (
             <div

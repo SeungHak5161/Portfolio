@@ -14,13 +14,13 @@ export const dataList = [
   {
     name: "kitchen",
     content: "모든 조리기구, 레시피 그리고 최상의 식재료",
-    point: "6",
+    point: "5",
     isChecked: false,
   },
   {
     name: "dining",
     content: "세계 최고의 셰프가 만드는 음식이 매일 공수됨",
-    point: "9",
+    point: "7",
     isChecked: false,
   },
   {
@@ -43,7 +43,8 @@ export const dataList = [
   },
   {
     name: "movie",
-    content: "빔프로젝터, 지금까지의 모든 영화와 TV 프로그램(10년간 업데이트X)",
+    content:
+      "빔프로젝터, 지금까지의 모든 영화와 TV 프로그램\n(10년간 업데이트 X)",
     point: "4",
     isChecked: false,
   },
@@ -62,13 +63,13 @@ export const dataList = [
   {
     name: "internet",
     content:
-      "적당한 사양의 PC, 인터넷(웹서핑, 채팅 가능 / 영화같은 컨텐츠는 검열됨)",
+      "적당한 사양의 PC, 인터넷(유튜브, 채팅 등 가능 / 영화같은 컨텐츠는 검열됨)",
     point: "16",
     isChecked: false,
   },
   {
     name: "soundsystem",
-    content: "완벽한 음향 시스템, 현존하는 모든 음반(업데이트X)",
+    content: "완벽한 음향 시스템, 현존하는 모든 음반\n(10년간 업데이트 X)",
     point: "4",
     isChecked: false,
   },
@@ -86,7 +87,7 @@ export const dataList = [
   },
   {
     name: "library",
-    content: "현존하는 모든 도서가 있는 도서관(업데이트X)",
+    content: "현존하는 모든 도서가 있는 도서관\n(10년간 업데이트 X)",
     point: "4",
     isChecked: false,
   },
@@ -128,7 +129,7 @@ export const dataList = [
   },
   {
     name: "doctor",
-    content: "죽지 않을 정도로만 치료를 제공하는 의사",
+    content: "죽지만 않을 정도의 치료를 제공하는 의사",
     point: "2",
     isChecked: false,
   },

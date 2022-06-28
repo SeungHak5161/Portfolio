@@ -4,6 +4,7 @@ import MainApp from "./Component/MainApp";
 import { dataList } from "./data.js";
 import ControlBar from "./Component/ControlBar";
 import _ from "lodash";
+import html2canvas from "html2canvas";
 
 function App() {
   const initialData = _.cloneDeep(dataList);
@@ -18,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <p>Header Section</p>
+        <p></p>
       </header>
       <main className="main">
         <article id="description-article">
@@ -36,6 +37,7 @@ function App() {
         <section id="main-app">
           <MainApp
             data={data}
+            count={count}
             onClick={(idx) => {
               const newData = data;
               let point = count;
@@ -55,9 +57,19 @@ function App() {
           <section id="control-bar">
             <ControlBar
               data={data}
-              count={count}
               onReset={() => {
                 setReset(true);
+              }}
+              onCapture={($el) => {
+                html2canvas($el).then((canvas) => {
+                  canvas.toBlob(
+                    async (blob) =>
+                      await navigator.clipboard.write([
+                        new window.ClipboardItem({ "image/png": blob }),
+                      ])
+                  );
+                  alert("클립보드에 복사되었습니다.");
+                });
               }}
             />
           </section>

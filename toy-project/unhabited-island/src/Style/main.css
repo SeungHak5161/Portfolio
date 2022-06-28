@@ -1,6 +1,8 @@
 @import "https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
 
 .App {
+  font-family: "Nanum Gothic", sans-serif;
   font-weight: 500;
   line-height: 130%;
   width: 100%;
@@ -24,9 +26,7 @@ header {
 
 .main {
   width: 90%;
-  /* position: relative; */
   margin: 1rem auto;
-  /* margin-top: 1rem; */
 }
 
 #description-article {
@@ -50,36 +50,42 @@ header {
   justify-content: center;
   align-items: center;
   margin: 1rem auto;
-  width: 85%;
+  width: 65%;
 }
 #main-app-table {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
+}
+#sum-point {
+  flex-basis: 100%;
+  text-align: right;
+  font-weight: 600;
+  font-size: larger;
 }
 .table-elm {
   position: relative;
   width: 10vw;
   height: 10vw;
-  margin: 1px;
+  margin: 3px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 5%;
 }
 .table-elm-img {
   display: block;
   margin: 1rem auto 0px;
   height: 50%;
-  /* object-fit: cover; */
 }
 .table-elm-content {
   margin-top: 0.5rem;
   font-size: 0.8rem;
-  line-height: 110%;
-  font-weight: 500;
+  line-height: 120%;
+  font-weight: 600;
 }
 .table-elm-point {
   position: absolute;
@@ -87,19 +93,24 @@ header {
   left: 0;
   font-weight: 900;
   background-color: #ff999966;
+  border-radius: 10%;
 }
 /* control-bar */
-#control-bar-container {
-  height: 100%;
+#control-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.control-bar-elm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0px 1px;
-}
-.control-bar-elm {
-  width: 12vw;
-  height: 12vw;
+  width: 5vw;
+  height: 5vw;
   background-color: #e7e9eb;
   margin: 1px;
+  font-weight: bolder;
+  border-radius: 30%;
 }
