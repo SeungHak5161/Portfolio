@@ -1,3 +1,5 @@
+// import _ from "lodash";
+
 export const dataList = [
   {
     name: "microwave",
@@ -182,3 +184,6 @@ export const dataList = [
     isChecked: false,
   },
 ];
+
+// export const initialData = _.cloneDeep(dataList);
+// export const initialData = JSON.parse(JSON.stringify(dataList));
