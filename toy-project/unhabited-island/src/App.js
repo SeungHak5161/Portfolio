@@ -15,7 +15,7 @@ function App() {
     setReset(false);
     setData(initialData);
     setCount(0);
-  }, [reset]);
+  }, [reset, initialData]);
   return (
     <div className="App">
       <header>
