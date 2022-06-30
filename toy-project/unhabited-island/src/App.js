@@ -6,7 +6,6 @@ import ControlBar from "./Component/ControlBar";
 import html2canvas from "html2canvas";
 
 function App() {
-  useEffect(() => {});
   const [data, setData] = useState(dataList);
   const [count, setCount] = useState(0);
   const [reset, setReset] = useState(false);
