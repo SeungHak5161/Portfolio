@@ -4,7 +4,11 @@ export default function ControlBar(props) {
   return (
     <>
       <div className="control-bar-elm" onClick={() => props.onReset()}>
-        <img src={require("../Assets/Icons/reset.png")} alt="reset" />
+        <img
+          className="control-bar-elm-img"
+          src={require("../Assets/Icons/reset.png")}
+          alt="reset"
+        />
         Reset
       </div>
       <div
@@ -14,7 +18,11 @@ export default function ControlBar(props) {
           props.onCapture(mainApp);
         }}
       >
-        <img src={require("../Assets/Icons/copy.png")} alt="reset" />
+        <img
+          className="control-bar-elm-img"
+          src={require("../Assets/Icons/copy.png")}
+          alt="reset"
+        />
         Copy
       </div>
     </>

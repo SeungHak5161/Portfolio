@@ -38,6 +38,18 @@ export const dataList = [
     isChecked: false,
   },
   {
+    name: "bath",
+    content: "각종 위생용품, 스파 시설",
+    point: "3",
+    isChecked: false,
+  },
+  {
+    name: "suzy",
+    content: "당신을 사랑해주는 완벽한 이상형",
+    point: "18",
+    isChecked: false,
+  },
+  {
     name: "TV",
     content: "52인치짜리 TV, 모든 채널(OTT 불가능)",
     point: "7",
@@ -46,7 +58,7 @@ export const dataList = [
   {
     name: "movie",
     content:
-      "빔프로젝터, 지금까지의 모든 영화와 TV 프로그램\n(10년간 업데이트 X)",
+      "빔프로젝터, 현존하는 모든 영화와 TV 프로그램\n(10년간 업데이트 X)",
     point: "4",
     isChecked: false,
   },
@@ -73,12 +85,6 @@ export const dataList = [
     name: "soundsystem",
     content: "완벽한 음향 시스템, 현존하는 모든 음반\n(10년간 업데이트 X)",
     point: "4",
-    isChecked: false,
-  },
-  {
-    name: "suzy",
-    content: "당신을 사랑해주는 완벽한 이상형",
-    point: "18",
     isChecked: false,
   },
   {
@@ -121,12 +127,6 @@ export const dataList = [
     name: "tool",
     content: "모든 공구, 재료, 작업실",
     point: "6",
-    isChecked: false,
-  },
-  {
-    name: "bath",
-    content: "각종 위생용품, 스파 시설",
-    point: "3",
     isChecked: false,
   },
   {

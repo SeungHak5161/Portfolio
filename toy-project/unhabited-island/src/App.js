@@ -50,6 +50,18 @@ function App() {
         isChecked: false,
       },
       {
+        name: "bath",
+        content: "각종 위생용품, 스파 시설",
+        point: "3",
+        isChecked: false,
+      },
+      {
+        name: "suzy",
+        content: "당신을 사랑해주는 완벽한 이상형",
+        point: "18",
+        isChecked: false,
+      },
+      {
         name: "TV",
         content: "52인치짜리 TV, 모든 채널(OTT 불가능)",
         point: "7",
@@ -58,7 +70,7 @@ function App() {
       {
         name: "movie",
         content:
-          "빔프로젝터, 지금까지의 모든 영화와 TV 프로그램\n(10년간 업데이트 X)",
+          "빔프로젝터, 현존하는 모든 영화와 TV 프로그램\n(10년간 업데이트 X)",
         point: "4",
         isChecked: false,
       },
@@ -85,12 +97,6 @@ function App() {
         name: "soundsystem",
         content: "완벽한 음향 시스템, 현존하는 모든 음반\n(10년간 업데이트 X)",
         point: "4",
-        isChecked: false,
-      },
-      {
-        name: "suzy",
-        content: "당신을 사랑해주는 완벽한 이상형",
-        point: "18",
         isChecked: false,
       },
       {
@@ -133,12 +139,6 @@ function App() {
         name: "tool",
         content: "모든 공구, 재료, 작업실",
         point: "6",
-        isChecked: false,
-      },
-      {
-        name: "bath",
-        content: "각종 위생용품, 스파 시설",
-        point: "3",
         isChecked: false,
       },
       {
@@ -216,6 +216,25 @@ function App() {
             있습니다.)
           </p>
         </article>
+        <section id="control-bar">
+          <ControlBar
+            data={data}
+            onReset={() => {
+              setReset(true);
+            }}
+            onCapture={($el) => {
+              html2canvas($el).then((canvas) => {
+                canvas.toBlob(
+                  async (blob) =>
+                    await navigator.clipboard.write([
+                      new window.ClipboardItem({ "image/png": blob }),
+                    ])
+                );
+                alert("클립보드에 복사되었습니다.");
+              });
+            }}
+          />
+        </section>
         <section id="main-app">
           <MainApp
             data={data}
@@ -236,25 +255,6 @@ function App() {
               }
             }}
           />
-          <section id="control-bar">
-            <ControlBar
-              data={data}
-              onReset={() => {
-                setReset(true);
-              }}
-              onCapture={($el) => {
-                html2canvas($el).then((canvas) => {
-                  canvas.toBlob(
-                    async (blob) =>
-                      await navigator.clipboard.write([
-                        new window.ClipboardItem({ "image/png": blob }),
-                      ])
-                  );
-                  alert("클립보드에 복사되었습니다.");
-                });
-              }}
-            />
-          </section>
         </section>
       </main>
     </div>
