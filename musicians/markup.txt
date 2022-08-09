@@ -1,10 +1,19 @@
-- pages : index(homepage), musicians, releases, about
+- pages : 
+  index-> musicians, releases (라우팅, SSG, SEO)
+  musicians -> musicians/[name] (라우팅, SSG, SEO)
+  releases -> crawl msbsound.com (캐싱, SSR->pre-rendering 때문)
+  about -> 사용한 스택 (SSG)
 
-index-> musicians, releases (라우팅, SSG, SEO)
-musicians -> musicians/[name] (라우팅, SSG, SEO)
-releases -> crawl msbsound.com (캐싱, SSR->pre-rendering 때문)
-about -> 사용한 스택 (SSG)
+- lib : 
+  [read file, sort(date), post data]
 
-- lib : [read file, sort(date), post data]
+- styles : 
+  headings(size, font-weight, letter-spacing, line-height), 
+  listItem(margin), 
+  listImage(borderCircle), 
+  light-text(color), 
+  albums(layout)
 
-- styles : heading(size, font-weight, letter-spacing, line-height), listItem(margin), light-text(color)
+- components : 
+  layout, 
+  date(date-fns)
