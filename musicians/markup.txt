@@ -1,0 +1,10 @@
+- pages : index(homepage), musicians, releases, about
+
+index-> musicians, releases (라우팅, SSG, SEO)
+musicians -> musicians/[name] (라우팅, SSG, SEO)
+releases -> crawl msbsound.com (캐싱, SSR->pre-rendering 때문)
+about -> 사용한 스택 (SSG)
+
+- lib : [read file, sort(date), post data]
+
+- styles : heading(size, font-weight, letter-spacing, line-height), listItem(margin), light-text(color)
