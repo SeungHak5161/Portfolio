@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import utilStyles from "../styles/utils.module.css";
 import Layout from "../components/layout";
 
 export default function Home() {
@@ -10,18 +12,17 @@ export default function Home() {
         <title>My Favorite Musicians</title>
         <meta name="description" content="SH's Favorite Musicians" />
       </Head>
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      {/* <section>
+        <Image
+          src="/images/kimsuyoung.jpg"
+          className={utilStyles.borderCircle}
+          width={"100%"}
+          height={"100%"}
+        ></Image>
+        <h1 className={`${utilStyles.heading} ${utilStyles.bold15X}`}>
+          나만 알기 아까운 가수들을 소개합니다.
+        </h1>
+      </section> */}
     </Layout>
   );
 }

@@ -1,0 +1,16 @@
+.bold15X {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.heading {
+  text-align: center;
+  /* 줄 높이 */
+  line-height: 1.2;
+  /* 글자 사이 간격 */
+  letter-spacing: 0.05rem;
+  margin: 1rem 0;
+}
+
+.borderCircle {
+  border-radius: 9999px;
+}
