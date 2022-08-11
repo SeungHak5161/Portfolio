@@ -12,5 +12,10 @@
 }
 
 .borderCircle {
+  /* border-radius: 50%; */
   border-radius: 9999px;
+}
+
+.roundBorder {
+  border-radius: 10%;
 }
