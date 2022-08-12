@@ -1,11 +1,18 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+// css
 import styles from "../styles/Home.module.css";
 import utilStyles from "../styles/utils.module.css";
+// component
 import Layout from "../components/layout";
+// Swiper
+import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
 
 export default function Home() {
   return (
@@ -15,48 +22,68 @@ export default function Home() {
         <meta name="description" content="SH's Favorite Musicians" />
       </Head>
       <section>
-        {/* <div className={styles.homeDivImage}>
-          <Image
-            src="/images/kimsuyoung.jpg"
-            layout="fill"
-            objectFit="cover"
-          ></Image>
-        </div> */}
-        {/* <div className="swiper-wrapper"> */}
         <Swiper
           className={styles.swiperWrapper}
-          // direction={"horizontal"}
-          // autoplay={true}
+          modules={[Pagination, Navigation, Autoplay, EffectCoverflow]}
+          pagination={{
+            dynamicBullets: true,
+            clickable: true,
+          }}
+          navigation={true}
+          loop={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           spaceBetween={50}
-          slidesPerView={3}
+          centeredSlides={true}
+          slidesPerView={2}
+          effect={"coverflow"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          }}
           onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide className={styles.swiperImg}>
-            {/* <Image
-              // className={styles.swiperImg}
+            <Image
+              className={styles.swiperImg}
               src="/images/kimsuyoung.jpg"
               layout="fill"
-              objectFit="cover"
-            ></Image> */}
-            1111111111
+              objectFit="contain"
+            ></Image>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperImg}>
-            {/* <Image
-              // className={styles.swiperImg}
+            <Image
+              className={styles.swiperImg}
               src="/images/kimsuyoung.jpg"
               layout="fill"
-              objectFit="cover"
-            ></Image> */}
-            2222222222
+              objectFit="contain"
+            ></Image>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperImg}>
-            {/* <Image
-              // className={styles.swiperImg}
-              src="/images/kimsuyoslideung.jpg"
+            <Image
+              className={styles.swiperImg}
+              src="/images/kimsuyoung.jpg"
               layout="fill"
-              objectFit="cover"
-            ></Image> */}
-            333333333333
+              objectFit="contain"
+            ></Image>
+          </SwiperSlide>
+          <SwiperSlide className={styles.swiperImg}>
+            <Image
+              className={styles.swiperImg}
+              src="/images/kimsuyoung.jpg"
+              layout="fill"
+              objectFit="contain"
+            ></Image>
+          </SwiperSlide>
+          <SwiperSlide className={styles.swiperImg}>
+            <Image
+              className={styles.swiperImg}
+              src="/images/kimsuyoung.jpg"
+              layout="fill"
+              objectFit="contain"
+            ></Image>
           </SwiperSlide>
         </Swiper>
         {/* </div> */}

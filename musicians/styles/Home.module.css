@@ -37,20 +37,11 @@
 }
 
 .swiperWrapper {
-  height: 300px;
+  height: 500px;
   width: 100%;
-}
-
-.swiperSlide {
-  height: 100%;
-  display: flex;
-  align-items: center;
 }
 
 .swiperImg {
-  height: 100%;
-  width: 100%;
-  position: relative;
 }
 
 .footer {
