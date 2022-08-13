@@ -43,7 +43,6 @@ export default function Home() {
             modifier: 1,
             slideShadows: false,
           }}
-          onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide className={styles.swiperImg}>
             <Image

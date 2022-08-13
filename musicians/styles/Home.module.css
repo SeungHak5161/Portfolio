@@ -41,9 +41,6 @@
   width: 100%;
 }
 
-.swiperImg {
-}
-
 .footer {
   display: flex;
   flex: 1;
@@ -58,6 +55,10 @@
   justify-content: center;
   align-items: center;
   /* flex-grow: 1; */
+}
+
+.githubIcon {
+  margin: 0 3px 0;
 }
 
 /* @media (prefers-color-scheme: dark) {
