@@ -17,3 +17,8 @@
 - components : 
   layout, 
   date(date-fns)
+
+- 고려할 것 :
+  robots.txt -> seo
+  XML Sitemaps
+  releases 크롤링

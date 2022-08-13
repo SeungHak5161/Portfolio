@@ -15,7 +15,6 @@ export default function Layout({ children, home }) {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="URL Example" />
         <meta property="og:locale" content="ko_KR" />
-        <meta property="og:description" content="SH's Favorite Muscians" />
         <meta name="author" content="SeungHak5161" />
         <meta
           property="og:image"
