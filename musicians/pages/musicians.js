@@ -2,10 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 // css
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Musicians.module.css";
 import utilStyles from "../styles/utils.module.css";
 // component
 import Layout from "../components/layout";
+import Date from "../components/date";
 // library
 import { getSortedPostsData } from "../lib/posts";
 
@@ -17,11 +18,13 @@ export default function musicians({ allPostsData }) {
         <meta name="description" content="Musicians list" />
       </Head>
       <section>
-        <ul>
+        <ul className={styles.musicianUl}>
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
               <Link href={`/posts/${id}`}>
-                <a>{title}</a>
+                <a>
+                  <p className="styles.bold10X">{title}</p>
+                </a>
               </Link>
               <br />
               <small className={utilStyles.lightText}>
