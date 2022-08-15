@@ -40,25 +40,27 @@ export default function musicians({ allPostsData }) {
           ))}
         </ul>
       </section> */}
-      <section className={styles.musicianSection}>
-        {allPostsData.map(({ id, date, title, image }) => (
-          <div className={styles.musicianWrapper} key={id}>
-            <Link href={`/posts/${id}`}>
-              <a>
-                <div className={styles.musicianImg}>
-                  <Image
-                    src="/images/kimsuyoung.jpg"
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </div>
-                <p className={`${styles.musicianName} ${utilStyles.bold10X}`}>
-                  {title}
-                </p>
-              </a>
-            </Link>
-          </div>
-        ))}
+      <section className={styles.musicianSectionWrapper}>
+        <div className={styles.musicianSection}>
+          {allPostsData.map(({ id, date, title, image }) => (
+            <div className={styles.musicianWrapper} key={id}>
+              <Link href={`/posts/${id}`}>
+                <a>
+                  <div className={styles.musicianImg}>
+                    <Image
+                      src="/images/kimsuyoung.jpg"
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  </div>
+                  <p className={`${styles.musicianName} ${utilStyles.bold10X}`}>
+                    {title}
+                  </p>
+                </a>
+              </Link>
+            </div>
+          ))}
+        </div>
       </section>
     </Layout>
   );

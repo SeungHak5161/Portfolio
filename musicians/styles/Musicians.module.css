@@ -1,26 +1,22 @@
-/* .musicianUl {
-  list-style: none;
-  margin: 5px;
-}
-.musicianLi {
-  height: 200px;
-  list-style: none;
-  margin: 5px 0 5px;
-  border: 1px rgb(160, 160, 160) solid;
-  position: relative;
-} */
+/* .mu */
 
+.musicianSectionWrapper {
+  display: flex;
+  justify-content: center;
+}
 .musicianSection {
-  display: table-cell;
+  width: 75vw;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .musicianWrapper {
-  padding: 10px;
+  padding: 0.5vw;
 }
 
 .musicianImg {
-  height: 264px;
-  width: 367px;
+  height: calc((75vw - (0.5vw * 6)) / 3 / 25 * 18);
+  width: calc((75vw - (0.5vw * 6)) / 3);
   position: relative;
 }
 .musicianName {

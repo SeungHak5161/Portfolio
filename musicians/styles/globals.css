@@ -13,6 +13,11 @@ body {
   box-sizing: border-box;
 }
 
+*::selection {
+  color: black;
+  background: rgb(247, 183, 118);
+}
+
 a {
   color: inherit;
   text-decoration: none;
