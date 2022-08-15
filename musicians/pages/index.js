@@ -44,41 +44,36 @@ export default function Home() {
             slideShadows: false,
           }}
         >
-          <SwiperSlide className={styles.swiperImg}>
+          <SwiperSlide>
             <Image
-              className={styles.swiperImg}
               src="/images/kimsuyoung.jpg"
               layout="fill"
               objectFit="contain"
             ></Image>
           </SwiperSlide>
-          <SwiperSlide className={styles.swiperImg}>
+          <SwiperSlide>
             <Image
-              className={styles.swiperImg}
               src="/images/kimsuyoung.jpg"
               layout="fill"
               objectFit="contain"
             ></Image>
           </SwiperSlide>
-          <SwiperSlide className={styles.swiperImg}>
+          <SwiperSlide>
             <Image
-              className={styles.swiperImg}
               src="/images/kimsuyoung.jpg"
               layout="fill"
               objectFit="contain"
             ></Image>
           </SwiperSlide>
-          <SwiperSlide className={styles.swiperImg}>
+          <SwiperSlide>
             <Image
-              className={styles.swiperImg}
               src="/images/kimsuyoung.jpg"
               layout="fill"
               objectFit="contain"
             ></Image>
           </SwiperSlide>
-          <SwiperSlide className={styles.swiperImg}>
+          <SwiperSlide>
             <Image
-              className={styles.swiperImg}
               src="/images/kimsuyoung.jpg"
               layout="fill"
               objectFit="contain"

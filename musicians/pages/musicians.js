@@ -17,22 +17,48 @@ export default function musicians({ allPostsData }) {
         <title>Musicians</title>
         <meta name="description" content="Musicians list" />
       </Head>
-      <section>
+      {/* <section>
         <ul className={styles.musicianUl}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
+          {allPostsData.map(({ id, date, title, image }) => (
+            <li key={id} className={styles.musicianLi}>
               <Link href={`/posts/${id}`}>
                 <a>
-                  <p className="styles.bold10X">{title}</p>
+                  <p className={utilStyles.bold10X}>{title}</p>
                 </a>
               </Link>
-              <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
               </small>
+              <Image
+                className={styles.musicianImg}
+                // src={image}
+                src="/images/kimsuyoung.jpg"
+                layout="fill"
+                objectFit="contain"
+              />
             </li>
           ))}
         </ul>
+      </section> */}
+      <section className={styles.musicianSection}>
+        {allPostsData.map(({ id, date, title, image }) => (
+          <div className={styles.musicianWrapper} key={id}>
+            <Link href={`/posts/${id}`}>
+              <a>
+                <div className={styles.musicianImg}>
+                  <Image
+                    src="/images/kimsuyoung.jpg"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
+                <p className={`${styles.musicianName} ${utilStyles.bold10X}`}>
+                  {title}
+                </p>
+              </a>
+            </Link>
+          </div>
+        ))}
       </section>
     </Layout>
   );

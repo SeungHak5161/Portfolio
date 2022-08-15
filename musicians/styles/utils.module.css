@@ -23,3 +23,7 @@
 .roundBorder {
   border-radius: 10%;
 }
+
+.lightText {
+  color: #666;
+}
