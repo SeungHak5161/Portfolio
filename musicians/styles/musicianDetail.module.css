@@ -1,0 +1,25 @@
+.entireWrapper {
+  display: flex;
+  justify-content: center;
+}
+.musicianDetailWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 75vw;
+}
+
+.description {
+  width: calc(75vw / 2);
+  padding: 0 20px 0;
+}
+
+.image {
+  height: calc(((75vw / 2) - (20px * 2)) / 25 * 18);
+  width: calc((75vw / 2) - (20px * 2));
+  position: relative;
+}
+
+.recommend {
+  width: 50%;
+  padding: 0 20px 0;
+}

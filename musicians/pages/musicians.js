@@ -30,9 +30,11 @@ export default function musicians({ allPostsData }) {
                       objectFit="contain"
                     />
                   </div>
-                  <p className={`${styles.musicianName} ${utilStyles.bold10X}`}>
+                  <div
+                    className={`${styles.musicianName} ${utilStyles.bold10X}`}
+                  >
                     {title}
-                  </p>
+                  </div>
                 </a>
               </Link>
             </div>
