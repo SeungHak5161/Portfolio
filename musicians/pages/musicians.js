@@ -25,7 +25,7 @@ export default function musicians({ allPostsData }) {
                 <a>
                   <div className={styles.musicianImg}>
                     <Image
-                      src="/images/kimsuyoung.jpg"
+                      src="/images/김수영.jpg"
                       layout="fill"
                       objectFit="contain"
                     />

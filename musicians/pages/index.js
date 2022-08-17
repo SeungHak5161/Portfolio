@@ -46,35 +46,35 @@ export default function Home() {
         >
           <SwiperSlide>
             <Image
-              src="/images/kimsuyoung.jpg"
+              src="/images/김수영.jpg"
               layout="fill"
               objectFit="contain"
             ></Image>
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              src="/images/kimsuyoung.jpg"
+              src="/images/전진희.jpg"
               layout="fill"
               objectFit="contain"
             ></Image>
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              src="/images/kimsuyoung.jpg"
+              src="/images/김수영.jpg"
               layout="fill"
               objectFit="contain"
             ></Image>
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              src="/images/kimsuyoung.jpg"
+              src="/images/전진희.jpg"
               layout="fill"
               objectFit="contain"
             ></Image>
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              src="/images/kimsuyoung.jpg"
+              src="/images/김수영.jpg"
               layout="fill"
               objectFit="contain"
             ></Image>
