@@ -12,12 +12,21 @@ import Date from "../../components/date";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 // react-outube
 import Youtube from "react-youtube";
+import { useEffect } from "react";
 
 export default function Post({ postData }) {
   const router = useRouter();
   if (router.isFallback) {
     return <div>Loading</div>;
   }
+  // youtube api가 http를 기본으로 해석하기 때문에 설정 바꿔줘야 함,
+  // React 기반 SSR의 경우 렌더링 단계에서 Virtual DOM을 사용하기 때문에 window에 접근이 불가능 함.
+  // 따라서 useEffect를 사용하여 설정.
+  useEffect(() => {
+    window.YTConfig = {
+      host: "https://www.youtube.com",
+    };
+  }, []);
   return (
     <Layout>
       <Head>
@@ -25,23 +34,40 @@ export default function Post({ postData }) {
       </Head>
       <div className={styles.entireWrapper}>
         <div className={styles.musicianDetailWrapper}>
+          <p className={`${utilStyles.bold20X} ${styles.title}`}>
+            {postData.title}
+          </p>
           <section className={styles.description}>
-            <h1 className={utilStyles.bold15X}>{postData.title}</h1>
-            <div className={utilStyles.lightText}>
-              {/* <Date dateString={postData.date} /> */}
-            </div>
+            <div className={utilStyles.lightText}></div>
             <div className={styles.image}>
               <Image src={postData.image} layout="fill" objectFit="contain" />
             </div>
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            <div
+              className={styles.descriptionArticle}
+              dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+            />
           </section>
           <section className={styles.recommend}>
-            <p className={utilStyles.bold15X}>추천곡</p>
-            {postData.youtubeId.map((youtubeId) => (
-              <div className={styles.player} key={youtubeId}>
-                <Youtube videoId={youtubeId} />
-              </div>
-            ))}
+            <p
+              className={`${utilStyles.bold10X} ${utilStyles.boldBorder} ${styles.recommendTitle}`}
+            >
+              추천곡
+            </p>
+            <div className={styles.recommendList}>
+              {postData.youtubeId.map((youtubeId) => (
+                <div className={styles.player} key={youtubeId}>
+                  <Youtube
+                    videoId={youtubeId}
+                    opts={{
+                      playerVars: {
+                        // 특수효과 기본값 사용 안 함 -> 왜 적용 안되냐
+                        iv_load_policy: 3,
+                      },
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
           </section>
         </div>
       </div>

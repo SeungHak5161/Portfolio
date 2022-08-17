@@ -6,20 +6,46 @@
   display: flex;
   justify-content: space-between;
   width: 75vw;
+  margin: 10px 0;
+}
+
+.title {
+  writing-mode: vertical-rl;
+  width: 3vw;
+  letter-spacing: 1rem;
+  inline-size: 15rem;
+  border-right: 2px black solid;
 }
 
 .description {
-  width: calc(75vw / 2);
+  width: calc((75vw -3vw) / 2);
   padding: 0 20px 0;
 }
 
-.image {
-  height: calc(((75vw / 2) - (20px * 2)) / 25 * 18);
-  width: calc((75vw / 2) - (20px * 2));
+.description p {
+  margin: 5px 0;
+}
+
+.description .image {
+  height: calc((((75vw -3vw) / 2) - (20px * 2)) / 25 * 18);
+  width: calc(((75vw -3vw) / 2) - (20px * 2));
   position: relative;
 }
 
+.description .descriptionArticle {
+  margin: 10px 0 10px;
+}
+
 .recommend {
-  width: 50%;
+  width: calc((75vw-3vw) / 2);
   padding: 0 20px 0;
+}
+
+.recommendTitle {
+  margin: 0 0 5px 0;
+  display: inline;
+}
+
+.recommendList {
+  margin: 5px 0;
 }

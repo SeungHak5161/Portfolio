@@ -6,6 +6,12 @@
   font-size: 1.5rem;
   font-weight: 800;
 }
+
+.bold20X {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
 .heading {
   text-align: center;
   /* 줄 높이 */
@@ -22,6 +28,13 @@
 
 .roundBorder {
   border-radius: 10%;
+  border: black 1px solid;
+}
+
+.boldBorder {
+  display: inline-block;
+  border: black 2px solid;
+  padding: 5px 10px;
 }
 
 .lightText {
