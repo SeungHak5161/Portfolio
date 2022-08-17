@@ -40,7 +40,7 @@ export default function Post({ postData }) {
           <section className={styles.description}>
             <div className={utilStyles.lightText}></div>
             <div className={styles.image}>
-              <Image src={postData.image} layout="fill" objectFit="contain" />
+              <Image src={postData.image} layout="fill" objectFit="cover" />
             </div>
             <div
               className={styles.descriptionArticle}

@@ -46,8 +46,8 @@ export default function Home({ allPostsData }) {
             slideShadows: false,
           }}
         >
-          {allPostsData.map(({ image }) => (
-            <SwiperSlide>
+          {allPostsData.map(({ id, image }) => (
+            <SwiperSlide key={id}>
               <Image src={image} layout="fill" objectFit="cover"></Image>
             </SwiperSlide>
           ))}

@@ -27,8 +27,8 @@
 }
 
 .description .image {
-  height: calc((((75vw -3vw) / 2) - (20px * 2)) / 25 * 18);
-  width: calc(((75vw -3vw) / 2) - (20px * 2));
+  height: calc(((75vw - 3vw) / 2 - (20px * 2)) / 25 * 18);
+  width: calc((75vw - 3vw) / 2 - (20px * 2));
   position: relative;
 }
 
@@ -37,15 +37,19 @@
 }
 
 .recommend {
-  width: calc((75vw-3vw) / 2);
+  width: calc((75vw - 3vw) / 2);
   padding: 0 20px 0;
 }
 
-.recommendTitle {
-  margin: 0 0 5px 0;
+.recommend .recommendTitle {
   display: inline;
 }
 
-.recommendList {
-  margin: 5px 0;
+.recommend .recommendList {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendList .player {
+  margin: 10px 0 0;
 }
