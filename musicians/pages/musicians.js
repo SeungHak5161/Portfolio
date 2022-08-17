@@ -24,11 +24,7 @@ export default function musicians({ allPostsData }) {
               <Link href={`/musicians/${id}`}>
                 <a>
                   <div className={styles.musicianImg}>
-                    <Image
-                      src="/images/김수영.jpg"
-                      layout="fill"
-                      objectFit="contain"
-                    />
+                    <Image src={image} layout="fill" objectFit="cover" />
                   </div>
                   <div
                     className={`${styles.musicianName} ${utilStyles.bold10X}`}
