@@ -13,8 +13,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
+// library
+import { getSortedPostsData } from "../lib/posts";
 
-export default function Home() {
+export default function Home({ allPostsData }) {
   return (
     <Layout>
       <Head>
@@ -44,47 +46,25 @@ export default function Home() {
             slideShadows: false,
           }}
         >
-          <SwiperSlide>
-            <Image
-              src="/images/김수영.jpg"
-              layout="fill"
-              objectFit="contain"
-            ></Image>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/전진희.jpg"
-              layout="fill"
-              objectFit="contain"
-            ></Image>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/김수영.jpg"
-              layout="fill"
-              objectFit="contain"
-            ></Image>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/전진희.jpg"
-              layout="fill"
-              objectFit="contain"
-            ></Image>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/김수영.jpg"
-              layout="fill"
-              objectFit="contain"
-            ></Image>
-          </SwiperSlide>
+          {allPostsData.map(({ image }) => (
+            <SwiperSlide>
+              <Image src={image} layout="fill" objectFit="cover"></Image>
+            </SwiperSlide>
+          ))}
         </Swiper>
-        {/* </div> */}
         <h1 className={`${utilStyles.heading} ${utilStyles.bold15X}`}>
           나만 알기 아까운 가수들을 소개합니다.
         </h1>
       </section>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
 }
