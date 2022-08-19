@@ -1,0 +1,12 @@
+---
+link:
+  [
+    "https://vibe.naver.com/album/7596887",
+    "https://vibe.naver.com/album/6706088",
+  ]
+image:
+  [
+    "https://musicmeta-phinf.pstatic.net/album/007/596/7596887.jpg?type=r360Fll&v=20220617115944",
+    "https://musicmeta-phinf.pstatic.net/album/006/706/6706088.jpg?type=r360Fll&v=20211120115912",
+  ]
+---

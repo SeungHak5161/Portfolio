@@ -14,7 +14,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 // library
-import { getSortedPostsData } from "../lib/posts";
+import { getUnSortedPostsData } from "../lib/posts";
 
 export default function Home({ allPostsData }) {
   return (
@@ -61,7 +61,7 @@ export default function Home({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getUnSortedPostsData();
   return {
     props: {
       allPostsData,

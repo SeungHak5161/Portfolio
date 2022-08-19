@@ -6,9 +6,8 @@ import styles from "../styles/Musicians.module.css";
 import utilStyles from "../styles/utils.module.css";
 // component
 import Layout from "../components/layout";
-import Date from "../components/date";
 // library
-import { getSortedPostsData } from "../lib/posts";
+import { getUnSortedPostsData } from "../lib/posts";
 
 export default function musicians({ allPostsData }) {
   return (
@@ -41,7 +40,7 @@ export default function musicians({ allPostsData }) {
   );
 }
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getUnSortedPostsData();
   return {
     props: {
       allPostsData,
