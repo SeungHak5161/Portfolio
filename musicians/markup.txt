@@ -1,7 +1,7 @@
 - pages : 
   index-> musicians, releases (라우팅, SSG, SEO)
   musicians -> musicians/[name] (라우팅, SSG, SEO)
-  releases -> crawl msbsound.com (캐싱, SSR->pre-rendering 때문)
+  releases -> (캐싱, infinite scroll)
   about -> 사용한 스택 (SSG)
 
 - lib : 
@@ -21,4 +21,4 @@
 - 고려할 것 :
   robots.txt -> seo
   XML Sitemaps
-  releases 크롤링
+  releases 크롤링 
