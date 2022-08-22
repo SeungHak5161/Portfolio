@@ -4,6 +4,7 @@ import Link from "next/link";
 // component
 import Layout from "../components/layout";
 // library
+//
 import { getReleaseData } from "../lib/posts";
 
 export default function releases({ allReleasesData }) {
