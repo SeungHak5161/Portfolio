@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 // css
-import styles from "../styles/Musicians.module.css";
+import styles from "../styles/musicians.module.css";
 import utilStyles from "../styles/utils.module.css";
 // component
 import Layout from "../components/layout";
