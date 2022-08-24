@@ -13,7 +13,7 @@ import { getReleaseData } from "../lib/posts";
 export default function releases({ allReleasesData }) {
   return (
     <Layout>
-      <div className={styles.coverSectionWrapper}>
+      <section className={styles.coverSectionWrapper}>
         <div className={styles.coverSection}>
           {allReleasesData.image.map((image, idx) => (
             <div className={styles.coverImgWrapper} key={idx}>
@@ -29,7 +29,7 @@ export default function releases({ allReleasesData }) {
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </Layout>
   );
 }

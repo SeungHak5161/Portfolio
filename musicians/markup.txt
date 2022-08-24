@@ -1,8 +1,8 @@
 - pages : 
-  index-> musicians, releases (라우팅, SSG, SEO)
-  musicians -> musicians/[name] (라우팅, SSG, SEO)
-  releases -> (캐싱, infinite scroll)
-  about -> 사용한 스택 (SSG)
+  index-> musicians, releases (SSG)
+  musicians -> musicians/[name] (라우팅, SSG)
+  releases -> 
+  about -> 사용한 스택 설명 (SSG)
 
 - lib : 
   [read file, sort(date), post data]

@@ -7,10 +7,9 @@ import styles from "../../styles/musicianDetail.module.css";
 import utilStyles from "../../styles/utils.module.css";
 // component
 import Layout from "../../components/layout";
-import Date from "../../components/date";
 // library
 import { getAllPostIds, getPostData } from "../../lib/posts";
-// react-outube
+// react-youtube
 import Youtube from "react-youtube";
 import { useEffect } from "react";
 
