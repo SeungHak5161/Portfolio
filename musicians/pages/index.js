@@ -52,8 +52,10 @@ export default function Home({ allPostsData }) {
             </SwiperSlide>
           ))}
         </Swiper>
-        <h1 className={`${utilStyles.heading} ${utilStyles.bold15X}`}>
-          나만 알기 아까운 가수들을 소개합니다.
+        <h1
+          className={`${utilStyles.heading} ${utilStyles.bold15X} ${styles.phrase}`}
+        >
+          나만 알기 아쉬운 가수들을 소개합니다.
         </h1>
       </section>
     </Layout>

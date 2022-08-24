@@ -39,6 +39,14 @@
 .swiperWrapper {
   height: 500px;
   width: 100%;
+  margin: 5px;
+}
+
+.phrase {
+  font-family: "nanum gothic";
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 2rem;
 }
 
 .footer {
