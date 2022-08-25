@@ -7,7 +7,6 @@ import utilStyles from "../styles/utils.module.css";
 // component
 import Layout from "../components/layout";
 // library
-//
 import { getReleaseData } from "../lib/posts";
 
 export default function releases({ allReleasesData }) {

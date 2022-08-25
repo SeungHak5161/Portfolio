@@ -3,27 +3,37 @@ import Layout from "../components/layout";
 import styles from "../styles/about.module.css";
 import utilstyles from "../styles/utils.module.css";
 
-export default function about() {
+export default function about({ aboutData }) {
   return (
     <Layout>
-      <div
-        className={`${styles.title} ${utilstyles.heading} ${utilstyles.bold15X}`}
-      >
-        사용한 스택
-      </div>
       <section className={styles.stackSectionWrapper}>
         <div className={styles.stackSection}>
-          <div className={styles.stackRow}>
-            <div className={styles.stackName}>어쩌구</div>
-            <div className={styles.stackDescription}>블라블라</div>
+          <div className={styles.titleWrapper}>
+            <div
+              className={`${styles.title} ${utilstyles.heading} ${utilstyles.bold15X}`}
+            >
+              사용 기술
+            </div>
           </div>
           <div className={styles.stackRow}>
-            <div className={styles.stackName}>저쩌구</div>
-            <div className={styles.stackDescription}>불롸불롸</div>
+            <div className={`${styles.stackName} ${utilstyles.bold12X}`}>
+              Next.js
+            </div>
+            <div className={styles.stackDescription}>
+              - SSG(getStaticPaths, getStaticProps)
+              <br /> - page기반 Routing(+fallback을 이용한 Loading 처리)
+              <br /> - 그 외 : SEO, 캐싱, Image optimize, open graph 등 적용
+            </div>
           </div>
           <div className={styles.stackRow}>
-            <div className={styles.stackName}>웅냥냥</div>
-            <div className={styles.stackDescription}>참 어려운 사람</div>
+            <div className={`${styles.stackName} ${utilstyles.bold12X}`}>
+              Library
+            </div>
+            <div className={styles.stackDescription}>
+              - swiper : main page slider에 사용
+              <br />- gray-matter : YAML 형식 해석
+              <br />- remark : markdown 파일을 html로 변환해주는 라이브러리
+            </div>
           </div>
         </div>
       </section>
