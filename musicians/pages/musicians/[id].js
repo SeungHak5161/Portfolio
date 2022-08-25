@@ -16,7 +16,7 @@ import { useEffect } from "react";
 export default function Post({ postData }) {
   const router = useRouter();
   if (router.isFallback) {
-    return <div>Loading</div>;
+    return <div className={utilStyles.loading}>Loading</div>;
   }
   // youtube api가 http를 기본으로 해석하기 때문에 설정 바꿔줘야 함,
   // React 기반 SSR의 경우 렌더링 단계에서 Virtual DOM을 사용하기 때문에 window에 접근이 불가능 함.
