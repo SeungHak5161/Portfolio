@@ -12,9 +12,6 @@ const VSCodeStyle = ({ text, type, href }) => {
         </span>
       );
   }
-  // return <span>{text}</span>;
 };
-
-// const Link=forwardRef(function Link({ text, type, href ,...props}))
 
 export default VSCodeStyle;
