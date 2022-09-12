@@ -10,14 +10,17 @@
   }
 } */
 
-#navbar {
-  width: 100px;
+#navbarWrapper {
+  width: 9rem;
   height: 100vh;
+  background-color: #1e1e1e;
+}
+
+#navbar {
   display: flex;
   flex-direction: column;
   /* justify-content: center;
   align-items: center; */
-  border-right: 1px solid #eaeaea;
   font-family: cosolas;
 }
 

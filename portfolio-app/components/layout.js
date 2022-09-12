@@ -17,25 +17,21 @@ export default function Layout({ children, home }) {
         <meta property="og:url" content="URL Example" />
         <meta property="og:locale" content="ko_KR" />
         <meta name="author" content="SeungHak5161" />
-        <meta
-          property="og:image"
-          content={
-            "http://www.msbsound.com/wordpress/wp-content/uploads/2016/06/김수영_Dont-Know_프로필-1024x737.jpg"
-          }
-        />
+        <meta property="og:image" content={""} />
         <meta name="twitter:card" content="photo" />
       </Head>
-      <div id={styles.navbar} className={utilStyles.bold15X}>
-        <Link href="/">
-          <a className={styles.navLogo}>
-            {/* <Image
+      <div id={styles.navbarWrapper}>
+        <div id={styles.navbar} className={utilStyles.bold15X}>
+          {/* <Link href="/">
+            <a className={styles.navLogo}>
+              <Image
               src="/images/logo.png"
               width={"80px"}
               height={"80px"}
-            ></Image> */}
-          </a>
-        </Link>
-        {/* <Link href="/header" passHref>
+            ></Image>
+            </a>
+          </Link> */}
+          {/* <Link href="/header" passHref>
           <a className={styles.navItem}>{`<Header/>`}</a>
         </Link>
         <Link href="/project">
@@ -47,17 +43,18 @@ export default function Layout({ children, home }) {
         <Link href="/footer">
           <a className={styles.navItem}>{`<Footer/>`}</a>
         </Link> */}
-        <VSCodeStyle text={"Header"} type={"component"} href={"/header"} />
-        <VSCodeStyle text={"Project"} type={"component"} href={"/project"} />
-        <VSCodeStyle text={"Skill"} type={"component"} href={"/skill"} />
-        <VSCodeStyle text={"Footer"} type={"component"} href={"/footer"} />
+          <VSCodeStyle text={"Header"} type={"component"} href={"/header"} />
+          <VSCodeStyle text={"Project"} type={"component"} href={"/project"} />
+          <VSCodeStyle text={"Skill"} type={"component"} href={"/skill"} />
+          <VSCodeStyle text={"Footer"} type={"component"} href={"/footer"} />
+        </div>
       </div>
       <main>{children}</main>
       {/* <footer className={styles.footer}>
         <a
           href="https://github.com/SeungHak5161"
           target="_blank"
-          // 링크를 통해 들어간 페이지와 연결해주는 페이지 사이에 액세스할 수 없게 함(보안상, 성능상 이유)
+          // 링크를 통해 들어간 페이지와 연결해주는 페이지 사이에 액세스할 수 없게 함(보안상, 성능상 이유) 
           rel="noopener noreferrer"
         >
           Made by SeungHak5161
