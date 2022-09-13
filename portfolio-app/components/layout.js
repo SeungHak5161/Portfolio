@@ -43,10 +43,11 @@ export default function Layout({ children, home }) {
         <Link href="/footer">
           <a className={styles.navItem}>{`<Footer/>`}</a>
         </Link> */}
-          <VSCodeStyle text={"Header"} type={"component"} href={"/header"} />
+
+          {/* <VSCodeStyle text={"Header"} type={"component"} href={"/header"} />
           <VSCodeStyle text={"Project"} type={"component"} href={"/project"} />
           <VSCodeStyle text={"Skill"} type={"component"} href={"/skill"} />
-          <VSCodeStyle text={"Footer"} type={"component"} href={"/footer"} />
+          <VSCodeStyle text={"Footer"} type={"component"} href={"/footer"} /> */}
         </div>
       </div>
       <main>{children}</main>
