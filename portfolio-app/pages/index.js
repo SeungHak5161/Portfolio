@@ -29,10 +29,10 @@ export default function Home() {
         <meta name="description" content="백승학 포트폴리오" />
       </Head>
       <div id="container">
-        <div data-anchor="Page 1"></div>
-        <div data-anchor="Page 2"></div>
-        <div data-anchor="Page 3"></div>
-        <div data-anchor="Page 4"></div>
+        <div data-anchor="Page 1">page1</div>
+        <div data-anchor="Page 2">page2</div>
+        <div data-anchor="Page 3">page3</div>
+        <div data-anchor="Page 4">page4</div>
       </div>
     </Layout>
   );
