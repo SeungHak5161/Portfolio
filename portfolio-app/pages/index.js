@@ -7,7 +7,14 @@ import styles from "../styles/Home.module.css";
 import utilStyles from "../styles/utils.module.css";
 // component
 import Layout from "../components/layout";
+import VSCodeStyle from "../components/VSCodeStyle";
 // libarary
+
+// pages
+import Header from "./header";
+import Project from "./project";
+import Skill from "./skill";
+import Footer from "./footer";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -21,6 +28,8 @@ export default function Home() {
       anipation: 300,
       delay: 0,
       throttle: 50,
+      anchors: ["page-1", "project", "skill", "footer"],
+      pips: false,
       events: {
         wheel: true, // enable / disable mousewheel scrolling
         keydown: true, // enable / disable keyboard navigation
@@ -31,6 +40,7 @@ export default function Home() {
           -endPos * (currentTime /= interval) * (currentTime - 2) + startPos
         );
       },
+      onInit: () => {},
     });
     pageableRef.current = pageable;
   };
@@ -46,46 +56,71 @@ export default function Home() {
         <title>SeungHak5161</title>
         <meta name="description" content="백승학 포트폴리오" />
       </Head>
+
+      {/* navbar (anchors) */}
+      <div className={styles.navbarWrapper}>
+        <div className={`${styles.navbar} ${utilStyles.bold15X}`}>
+          <a href="#header" className={styles.navItem}>
+            <VSCodeStyle text={"Header"} type={"component"} href={"/header"} />
+          </a>
+          <a href="#project" className={styles.navItem}>
+            <VSCodeStyle
+              text={"Project"}
+              type={"component"}
+              href={"/project"}
+            />
+          </a>
+          <a href="#skill" className={styles.navItem}>
+            <VSCodeStyle text={"Skill"} type={"component"} href={"/skill"} />
+          </a>
+          <a href="#footer" className={styles.navItem}>
+            <VSCodeStyle text={"Footer"} type={"component"} href={"/footer"} />
+          </a>
+        </div>
+      </div>
       <div id="container">
         <div
-          data-anchor="page-1"
+          data-anchor="header"
           id="page-1"
+          className="pg-page"
+          style={{
+            backgroundColor: "darkseagreen",
+          }}
+        >
+          <Header />
+        </div>
+        <div
+          data-anchor="project"
+          id="page-2"
           className="pg-page"
           style={{
             backgroundColor: "peachpuff",
           }}
         >
-          page1
+          <Project />
         </div>
-
         <div
-          data-anchor="page-2"
+          data-anchor="skill"
+          id="page-3"
           className="pg-page"
           style={{
             backgroundColor: "cornflowerblue",
           }}
         >
-          page2
+          <Skill />
         </div>
         <div
-          data-anchor="page-3"
+          data-anchor="footer"
+          id="page-4"
           className="pg-page"
           style={{
-            backgroundColor: "bisque",
+            backgroundColor: "lightpink",
           }}
         >
-          page3
+          <Footer />
         </div>
-        <div
-          data-anchor="page-4"
-          className="pg-page"
-          style={{
-            backgroundColor: "mediumaquamarine",
-          }}
-        >
-          page4
-        </div>
-        <div
+
+        {/* <div
           className="linear-progress"
           style={{
             position: "fixed",
@@ -108,7 +143,7 @@ export default function Home() {
             }}
             ref={linearProgressBarRef}
           ></div>
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { forwardRef } from "react";
-
 const VSCodeStyle = ({ text, type, href }) => {
   switch (type) {
     case "component":
