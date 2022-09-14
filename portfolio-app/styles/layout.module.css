@@ -1,0 +1,7 @@
+.mainWrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - (9rem));
+  height: 100%;
+}

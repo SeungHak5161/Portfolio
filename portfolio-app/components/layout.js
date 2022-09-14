@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import VSCodeStyle from "./VSCodeStyle";
 
@@ -20,11 +20,9 @@ export default function Layout({ children, home }) {
         <meta property="og:image" content={""} />
         <meta name="twitter:card" content="photo" />
       </Head>
-      {/* <VSCodeStyle text={"Header"} type={"component"} href={"/header"} />
-          <VSCodeStyle text={"Project"} type={"component"} href={"/project"} />
-          <VSCodeStyle text={"Skill"} type={"component"} href={"/skill"} />
-          <VSCodeStyle text={"Footer"} type={"component"} href={"/footer"} /> */}
-      <main>{children}</main>
+      <div className={styles.mainWrapper}>
+        <main>{children}</main>
+      </div>
     </div>
   );
 }

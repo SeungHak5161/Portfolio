@@ -6,7 +6,6 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import utilStyles from "../styles/utils.module.css";
 // component
-import Layout from "../components/layout";
 import VSCodeStyle from "../components/VSCodeStyle";
 // libarary
 
@@ -51,7 +50,6 @@ export default function Home() {
   }, []);
   return (
     <>
-      {/* <Layout> */}
       <Head>
         <title>SeungHak5161</title>
         <meta name="description" content="백승학 포트폴리오" />
@@ -60,7 +58,7 @@ export default function Home() {
       {/* navbar (anchors) */}
       <div className={styles.navbarWrapper}>
         <div className={`${styles.navbar} ${utilStyles.bold15X}`}>
-          <a href="#header" className={styles.navItem}>
+          <a href="#header" className={`${styles.navItem} active`}>
             <VSCodeStyle text={"Header"} type={"component"} href={"/header"} />
           </a>
           <a href="#project" className={styles.navItem}>
@@ -82,7 +80,6 @@ export default function Home() {
         <div
           data-anchor="header"
           id="page-1"
-          className="pg-page"
           style={{
             backgroundColor: "darkseagreen",
           }}
@@ -92,7 +89,6 @@ export default function Home() {
         <div
           data-anchor="project"
           id="page-2"
-          className="pg-page"
           style={{
             backgroundColor: "peachpuff",
           }}
@@ -102,7 +98,6 @@ export default function Home() {
         <div
           data-anchor="skill"
           id="page-3"
-          className="pg-page"
           style={{
             backgroundColor: "cornflowerblue",
           }}
@@ -112,7 +107,6 @@ export default function Home() {
         <div
           data-anchor="footer"
           id="page-4"
-          className="pg-page"
           style={{
             backgroundColor: "lightpink",
           }}
