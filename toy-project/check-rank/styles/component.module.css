@@ -1,0 +1,53 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.numList {
+  width: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.numItem {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.list {
+  height: 100%;
+  width: 270px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.list :nth-child(1) {
+  background-color: aqua;
+}
+.list :nth-child(n + 2):nth-child(-n + 4) {
+  background-color: greenyellow;
+}
+.list :nth-child(5) {
+  background-color: orange;
+}
+.list :nth-child(6) {
+  background-color: green;
+}
+.list :nth-child(10) {
+  border-bottom: 2px solid black;
+}
+.list :nth-child(n + 18):nth-child(-n + 20) {
+  background-color: red;
+}
+.listItem {
+  height: 30px;
+  margin: 5px;
+  padding: 5px;
+}
