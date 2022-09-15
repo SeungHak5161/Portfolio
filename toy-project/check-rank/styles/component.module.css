@@ -1,10 +1,11 @@
 .mainWrapper {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .numList {
-  width: 2rem;
+  /* width: 2rem; */
   list-style: none;
   display: flex;
   flex-direction: column;
