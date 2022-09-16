@@ -30,7 +30,11 @@ export default async function eplRank({ id, option }) {
       const standings = res.standings[0].table;
       const teamRank = [];
       for (let i in standings) {
-        teamRank.push(standings[i].team.name);
+        const dict = {
+          position: standings[i].position,
+          name: standings[i].team.name,
+        };
+        teamRank.push(dict);
       }
       return teamRank;
   }

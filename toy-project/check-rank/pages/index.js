@@ -35,7 +35,6 @@ export default function Home() {
           refresh
         </button> */}
         <RankingTable data={ranking} />
-        {/* <RankingTable /> */}
       </main>
 
       <footer className={styles.footer}>
