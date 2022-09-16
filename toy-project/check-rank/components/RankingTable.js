@@ -1,27 +1,27 @@
 import styles from "../styles/component.module.css";
 
 export default function RankingTable({ data }) {
-  data = [
-    "Arsenal FC",
-    "Manchester City FC",
-    "Tottenham Hotspur FC",
-    "Brighton & Hove Albion FC",
-    "Manchester United FC",
-    "Chelsea FC",
-    "Liverpool FC",
-    "Brentford FC",
-    "Leeds United FC",
-    "Fulham FC",
-    "Newcastle United FC",
-    "Southampton FC",
-    "AFC Bournemouth",
-    "Wolverhampton Wanderers FC",
-    "Crystal Palace FC",
-    "Everton FC",
-    "Aston Villa FC",
-    "West Ham United FC",
-    "Nottingham Forest FC",
-    "Leicester City FC",
+  const mapping = [
+    { eng: "Arsenal FC", kor: "아스날" },
+    { eng: "Manchester City FC", kor: "맨시티" },
+    { eng: "Tottenham Hotspur FC", kor: "토트넘" },
+    { eng: "Brighton & Hove Albion FC", kor: "브라이튼" },
+    { eng: "Manchester United FC", kor: "맨체스터 유나이티드" },
+    { eng: "Chelsea FC", kor: "첼시" },
+    { eng: "Liverpool FC", kor: "리버풀" },
+    { eng: "Brentford FC", kor: "브렌트포드" },
+    { eng: "Leeds United FC", kor: "리즈" },
+    { eng: "Fulham FC", kor: "풀럼" },
+    { eng: "Newcastle United FC", kor: "뉴캐슬" },
+    { eng: "Southampton FC", kor: "사우스햄튼" },
+    { eng: "AFC Bournemouth", kor: "본머스" },
+    { eng: "Wolverhampton Wanderers FC", kor: "울버햄튼" },
+    { eng: "Crystal Palace FC", kor: "크리스탈 팰리스" },
+    { eng: "Everton FC", kor: "에버튼" },
+    { eng: "Aston Villa FC", kor: "아스톤 빌라" },
+    { eng: "West Ham United FC", kor: "웨스트햄" },
+    { eng: "Nottingham Forest FC", kor: "노팅엄 포레스트" },
+    { eng: "Leicester City FC", kor: "레스터 시티" },
   ];
   const SH = [
     "Manchester City FC",
@@ -111,9 +111,15 @@ export default function RankingTable({ data }) {
     "Fulham FC",
     "AFC Bournemouth",
   ];
-  console.log(data);
   return (
     <div className={styles.mainWrapper}>
+      <div className={styles.descriptionWrapper}>
+        <div className={styles.listDescription}>현 순위</div>
+        <div className={styles.listDescription}>현 순위</div>
+        <div className={styles.listDescription}>현 순위</div>
+        <div className={styles.listDescription}>현 순위</div>
+        <div className={styles.listDescription}>현 순위</div>
+      </div>
       <ul className={styles.numList}>
         {data.map((team, idx) => {
           return (
@@ -123,47 +129,76 @@ export default function RankingTable({ data }) {
           );
         })}
       </ul>
-      <ul className={styles.list}>
+      <ul className={`${styles.lists} ${styles.nowList}`}>
         {data.map((team) => {
+          const match = mapping.find((e) => {
+            if (e.eng === team) {
+              return e;
+            }
+          });
           return (
-            <li key={team} className={styles.listItem}>
-              {team}
+            <li key={match.kor} className={styles.listItem}>
+              {match.kor}
             </li>
           );
         })}
       </ul>
-      <ul className={styles.list}>
+
+      <ul className={styles.lists}>
         {SH.map((team) => {
+          const match = mapping.find((e) => {
+            if (e.eng === team) {
+              return e;
+            }
+          });
           return (
-            <li key={team} className={styles.listItem}>
-              {team}
+            <li key={match.kor} className={styles.listItem}>
+              {match.kor}
             </li>
           );
         })}
       </ul>
-      <ul className={styles.list}>
+
+      <ul className={styles.lists}>
         {WJ.map((team) => {
+          const match = mapping.find((e) => {
+            if (e.eng === team) {
+              return e;
+            }
+          });
           return (
-            <li key={team} className={styles.listItem}>
-              {team}
+            <li key={match.kor} className={styles.listItem}>
+              {match.kor}
             </li>
           );
         })}
       </ul>
-      <ul className={styles.list}>
+
+      <ul className={styles.lists}>
         {JS.map((team) => {
+          const match = mapping.find((e) => {
+            if (e.eng === team) {
+              return e;
+            }
+          });
           return (
-            <li key={team} className={styles.listItem}>
-              {team}
+            <li key={match.kor} className={styles.listItem}>
+              {match.kor}
             </li>
           );
         })}
       </ul>
-      <ul className={styles.list}>
+
+      <ul className={styles.lists}>
         {TG.map((team) => {
+          const match = mapping.find((e) => {
+            if (e.eng === team) {
+              return e;
+            }
+          });
           return (
-            <li key={team} className={styles.listItem}>
-              {team}
+            <li key={match.kor} className={styles.listItem}>
+              {match.kor}
             </li>
           );
         })}

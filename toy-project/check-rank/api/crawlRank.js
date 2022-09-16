@@ -9,17 +9,19 @@ export default async function eplRank({ id, option }) {
       method: "GET",
       headers: headers,
     });
-    const res = await fetch(myRequest)
-      .then((res) => {
+    try {
+      const res = await fetch(myRequest);
+      console.log("try to fetch");
+      if (!res.ok) {
+        console.log("res is not ok");
+        throw new Error("Response Error");
+      } else {
+        console.log("res is ok");
         return res.json();
-      })
-      .then((data) => {
-        return data;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    return res;
+      }
+    } catch (err) {
+      alert(err);
+    }
   };
 
   switch (option) {

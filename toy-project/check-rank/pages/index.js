@@ -6,32 +6,11 @@ import { useState, useEffect } from "react";
 import RankingTable from "../components/RankingTable.js";
 
 export default function Home() {
-  const [ranking, setRanking] = useState();
+  const [ranking, setRanking] = useState([]);
 
   const setState = async () => {
-    // const res = await eplRank({ id: "PL", option: "standings" });
-    const res = [
-      "Arsenal FC",
-      "Manchester City FC",
-      "Tottenham Hotspur FC",
-      "Brighton & Hove Albion FC",
-      "Manchester United FC",
-      "Chelsea FC",
-      "Liverpool FC",
-      "Brentford FC",
-      "Leeds United FC",
-      "Fulham FC",
-      "Newcastle United FC",
-      "Southampton FC",
-      "AFC Bournemouth",
-      "Wolverhampton Wanderers FC",
-      "Crystal Palace FC",
-      "Everton FC",
-      "Aston Villa FC",
-      "West Ham United FC",
-      "Nottingham Forest FC",
-      "Leicester City FC",
-    ];
+    const res = await eplRank({ id: "PL", option: "standings" });
+    console.log(res);
     setRanking(res);
   };
 
@@ -56,6 +35,7 @@ export default function Home() {
           refresh
         </button> */}
         <RankingTable data={ranking} />
+        {/* <RankingTable /> */}
       </main>
 
       <footer className={styles.footer}>

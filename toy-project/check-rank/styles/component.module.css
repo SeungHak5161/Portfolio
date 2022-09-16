@@ -1,54 +1,77 @@
 .mainWrapper {
+  /* numList와 List간에 margin겹침 현상때문에 따로 margin-right를 줘서 +10px해둠, 나중에 고치기 */
+  width: calc(92vw + 10px);
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.descriptionWrapper {
+  width: calc(92vw + 10px);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.listDescription {
+  text-align: center;
+  width: 18vw;
 }
 
 .numList {
-  /* width: 2rem; */
+  width: 2vw;
   list-style: none;
   display: flex;
   flex-direction: column;
+  margin-right: 10px;
 }
 
 .numItem {
-  width: 30px;
-  height: 30px;
-  border: 1px solid black;
+  width: inherit;
   margin: 5px;
-  padding: 5px;
+  border: 1px solid black;
   border-radius: 10%;
   text-align: center;
+  /* 가로 세로 비율 맞춰서 글자 세로 중앙 정렬 하기 위한 부분 */
+  aspect-ratio: 1;
+  line-height: calc(2vw - 2px);
+  vertical-align: middle;
 }
 
-.list {
+.lists {
   height: 100%;
-  width: 270px;
+  width: 18vw;
   list-style: none;
   display: flex;
   flex-direction: column;
 }
 
-.list :nth-child(1) {
+.nowList :nth-child(1) {
   background-color: aqua;
 }
-.list :nth-child(n + 2):nth-child(-n + 4) {
+.nowList :nth-child(n + 2):nth-child(-n + 4) {
   background-color: greenyellow;
 }
-.list :nth-child(5) {
+.nowList :nth-child(5) {
   background-color: orange;
 }
-.list :nth-child(6) {
+.nowList :nth-child(6) {
   background-color: green;
 }
-.list :nth-child(10) {
-  border-bottom: 2px solid black;
-}
-.list :nth-child(n + 18):nth-child(-n + 20) {
+
+.nowList :nth-child(n + 18):nth-child(-n + 20) {
   background-color: red;
 }
+
 .listItem {
-  height: 30px;
+  height: 2vw;
   margin: 5px;
   padding: 5px;
+  border-radius: 10px;
 }
+
+/* li[correct] {
+  color: blueviolet; 
+}
+*/
