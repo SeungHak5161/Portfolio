@@ -16,7 +16,13 @@
 
 .listDescription {
   text-align: center;
-  width: 18vw;
+  width: calc(18vw - 10px);
+  height: 2vw;
+  background-color: aliceblue;
+  margin: 5px;
+  border-radius: 10px;
+  line-height: calc(2vw - 2px);
+  vertical-align: middle;
 }
 
 .numList {
@@ -48,27 +54,42 @@
 }
 
 .nowList :nth-child(1) {
-  background-color: aqua;
+  background-color: #ffd700;
 }
 .nowList :nth-child(n + 2):nth-child(-n + 4) {
-  background-color: greenyellow;
+  background-color: #6297ff;
 }
 .nowList :nth-child(5) {
-  background-color: orange;
+  background-color: #fabf20;
 }
 .nowList :nth-child(6) {
-  background-color: green;
+  background-color: #34a853;
 }
-
 .nowList :nth-child(n + 18):nth-child(-n + 20) {
-  background-color: red;
+  background-color: #ea4335;
 }
 
 .listItem {
+  display: flex;
   height: 2vw;
   margin: 5px;
   padding: 5px;
   border-radius: 10px;
+  background-color: aliceblue;
+}
+
+.listItem :nth-child(n + 1):nth-child(-n + 2) {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.itemImg {
+  height: calc(2vw - 10px);
+  aspect-ratio: 1;
+  margin-right: 5px;
+}
+
+.correctItem {
+  background-color: greenyellow;
 }
 
 /* li[correct] {
