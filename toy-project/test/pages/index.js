@@ -1,5 +1,5 @@
 import Head from "next/head";
-// import Image from "next/image";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import eplRank from "../api/crawlRank";
 import { useState, useEffect } from "react";
@@ -10,15 +10,6 @@ export default function Home() {
 
   const setState = async () => {
     const res = await eplRank({ id: "PL", option: "standings" });
-    // const teamRank = [];
-    // for (let i in res) {
-    //   const dict = {
-    //     position: res[i].position,
-    //     name: res[i].team.name,
-    //   };
-    //   teamRank.push(dict);
-    //   console.log(dict, teamRank);
-    // }
     console.log(res);
     setRanking(res);
   };

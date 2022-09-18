@@ -1,0 +1,65 @@
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(102, 102, 102, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5rem;
+  font-family: "nanum gothic";
+  font-weight: 800;
+}
+
+.bold10X {
+  font-weight: 800;
+}
+
+.bold12X {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.bold15X {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.bold20X {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.heading {
+  text-align: center;
+  /* 줄 높이 */
+  line-height: 1.2;
+  /* 글자 사이 간격 */
+  letter-spacing: 0.05rem;
+  margin: 1rem 0;
+}
+
+.borderCircle {
+  /* border-radius: 50%; */
+  border-radius: 9999px;
+}
+
+.roundBorder {
+  border-radius: 10%;
+  border: black 1px solid;
+}
+
+.boldBorder {
+  display: inline-block;
+  border: black 2px solid;
+  padding: 5px 10px;
+}
+
+.lightText {
+  color: #666;
+}
+
+.colRev {
+  background-color: black;
+  color: white;
+}

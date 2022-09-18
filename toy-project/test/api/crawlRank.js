@@ -28,6 +28,7 @@ export default async function eplRank({ id, option }) {
     case "standings":
       const res = await fetching({ others: "standings" });
       const standings = res.standings[0].table;
+      console.log(standings);
       const teamRank = [];
       for (let i in standings) {
         const dict = {
