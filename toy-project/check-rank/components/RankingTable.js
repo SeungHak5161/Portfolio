@@ -17,7 +17,7 @@ export default function RankingTable({ data }) {
     let js = 0;
     let tg = 0;
     for (let i = 0; i < data.length; i++) {
-      console.log(data[i].name, SH[i].name);
+      // console.log(data[i].name, SH[i].name);
       if (data[i].name === SH[i].name) {
         sh++;
       }
