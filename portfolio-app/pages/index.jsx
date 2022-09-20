@@ -48,6 +48,7 @@ export default function Home() {
     containerRef.current = document.getElementById("container");
     loadPageable();
   }, []);
+
   return (
     <>
       <Head>
@@ -55,7 +56,7 @@ export default function Home() {
         <meta name="description" content="백승학 포트폴리오" />
       </Head>
 
-      {/* navbar (anchors) */}
+      {/** navbar (anchors) */}
       <div className={styles.navbarWrapper}>
         <div className={`${styles.navbar} ${utilStyles.bold15X}`}>
           <a href="#header" className={`${styles.navItem} active`}>
@@ -76,6 +77,8 @@ export default function Home() {
           </a>
         </div>
       </div>
+
+      {/** main container */}
       <div id="container">
         <div
           data-anchor="header"

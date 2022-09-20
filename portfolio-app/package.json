@@ -15,10 +15,12 @@
     "next": "12.2.5",
     "pageable": "^0.6.8",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-slick": "^0.29.0"
   },
   "devDependencies": {
     "eslint": "8.23.0",
-    "eslint-config-next": "12.2.5"
+    "eslint-config-next": "12.2.5",
+    "slick-carousel": "^1.8.1"
   }
 }

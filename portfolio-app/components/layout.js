@@ -9,7 +9,7 @@ const siteTitle = "title";
 
 export default function Layout({ children, home }) {
   return (
-    <div>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content={siteTitle} />
@@ -23,6 +23,6 @@ export default function Layout({ children, home }) {
       <div className={styles.mainWrapper}>
         <main>{children}</main>
       </div>
-    </div>
+    </>
   );
 }
