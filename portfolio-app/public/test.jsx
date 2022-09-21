@@ -3,17 +3,16 @@ import { useState, useEffect } from "react";
 // components
 import Layout from "../components/layout";
 import ProjectCard from "../components/projectCard";
-import VSCodeStyle from "../components/VSCodeStyle";
 // css
 import utilstyles from "../styles/utils.module.css";
 import styles from "../styles/project.module.css";
 // library
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css?after";
+import "slick-carousel/slick/slick-theme.css";
 import { getProjectData } from "../library/getData";
 
-export default function about({}) {
+export default function test({}) {
   function NextArrow(props) {
     const { className, style, onClick } = props;
     console.log(props);
@@ -23,6 +22,8 @@ export default function about({}) {
         style={{
           ...style,
           display: "block",
+          color: "#000",
+          // background: "red"
         }}
         onClick={onClick}
       />
@@ -37,6 +38,8 @@ export default function about({}) {
         style={{
           ...style,
           display: "block",
+          color: "#000",
+          // background: "green",
         }}
         onClick={onClick}
       />
@@ -49,6 +52,9 @@ export default function about({}) {
     infinite: false,
     slidesToShow: 3,
     slidesToScroll: 3,
+    // centerMode: true,
+    // centerPadding: "100px",
+    // variableWidth: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -76,9 +82,10 @@ export default function about({}) {
   const projectData = getProjectData();
 
   return (
-    <Layout>
+    <>
+      {/* <div className={utilstyles.bold15X}>project</div> */}
       <section className={styles.mainWrapper}>
-        {/* <div className={utilstyles.bold15X}>project</div> */}
+        {/* <ProjectCard project={projectData[0]} />; */}
         <Slider {...settings} className={styles.swiperWrapper}>
           {/* {projectData.map((e) => {
             <projectCard project={e} />;
@@ -91,6 +98,15 @@ export default function about({}) {
           <ProjectCard project={projectData[5]} />
         </Slider>
       </section>
-    </Layout>
+    </>
   );
 }
+
+// export async function getStaticProps() {
+//   const allProjectsData = getProjectData();
+//   return {
+//     props: {
+//       allProjectsData,
+//     },
+//   };
+// }

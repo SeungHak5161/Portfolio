@@ -1,16 +1,11 @@
 .mainWrapper {
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .swiperWrapper {
   width: 80%;
-  height: 60vh;
-  /* margin: 5px; */
-}
-
-.slideItem {
-  /* width: 400px; */
-  /* border: 1px solid black; */
-  /* height: 50%; */
+  height: calc(60vh + 1vh + 50px + 30px);
 }
