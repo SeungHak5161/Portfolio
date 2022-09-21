@@ -16,7 +16,6 @@ import { getProjectData } from "../library/getData";
 export default function about({}) {
   function NextArrow(props) {
     const { className, style, onClick } = props;
-    console.log(props);
     return (
       <div
         className={className}
@@ -53,7 +52,7 @@ export default function about({}) {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1600,
+        breakpoint: 1650,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -62,7 +61,7 @@ export default function about({}) {
         },
       },
       {
-        breakpoint: 1100,
+        breakpoint: 1150,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

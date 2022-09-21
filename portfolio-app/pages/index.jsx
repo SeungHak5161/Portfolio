@@ -20,6 +20,8 @@ export default function Home() {
   const pageableRef = useRef(null);
   const linearProgressBarRef = useRef(null);
 
+  const $navbar = useRef({ activeNow: null });
+
   const loadPageable = async () => {
     const Pageable = (await import("pageable")).default;
     const pageable = new Pageable(containerRef.current, {
@@ -30,8 +32,10 @@ export default function Home() {
       anchors: ["page-1", "project", "skill", "footer"],
       pips: false,
       events: {
-        wheel: true, // enable / disable mousewheel scrolling
-        keydown: true, // enable / disable keyboard navigation
+        wheel: true,
+        keydown: true,
+        touch: false,
+        mouse: false,
       },
       easing: function (currentTime, startPos, endPos, interval) {
         // the easing function used for the scroll animation
@@ -40,6 +44,15 @@ export default function Home() {
         );
       },
       onInit: () => {},
+      onBeforeStart: (e) => {
+        console.log(e);
+        $navbar.current.childNodes[e].classList.remove(`${styles.active}`);
+      },
+      onFinish: (e) => {
+        const actived = ($navbar.current.activeNow = e.index);
+
+        $navbar.current.childNodes[actived].classList.add(`${styles.active}`);
+      },
     });
     pageableRef.current = pageable;
   };
@@ -58,8 +71,8 @@ export default function Home() {
 
       {/** navbar (anchors) */}
       <div className={styles.navbarWrapper}>
-        <div className={`${styles.navbar} ${utilStyles.bold15X}`}>
-          <a href="#header" className={`${styles.navItem} active`}>
+        <div ref={$navbar} className={`${styles.navbar} ${utilStyles.bold15X}`}>
+          <a href="#header" className={`${styles.navItem}`}>
             <VSCodeStyle text={"Header"} type={"component"} href={"/header"} />
           </a>
           <a href="#project" className={styles.navItem}>
