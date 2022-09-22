@@ -38,16 +38,20 @@ export default function Home() {
         mouse: false,
       },
       easing: function (currentTime, startPos, endPos, interval) {
-        // the easing function used for the scroll animation
         return (
           -endPos * (currentTime /= interval) * (currentTime - 2) + startPos
         );
       },
-      onInit: () => {},
+      // 초기 렌더링 시, 해상도 변화시 호출
+      onUpdate: (e) => {
+        const actived = ($navbar.current.activeNow = e.index);
+        $navbar.current.childNodes[actived].classList.add(`${styles.active}`);
+      },
+      // 페이지 이동 전 호출
       onBeforeStart: (e) => {
-        console.log(e);
         $navbar.current.childNodes[e].classList.remove(`${styles.active}`);
       },
+      // 페이지 이동 후 호출
       onFinish: (e) => {
         const actived = ($navbar.current.activeNow = e.index);
 
@@ -93,13 +97,7 @@ export default function Home() {
 
       {/** main container */}
       <div id="container">
-        <div
-          data-anchor="header"
-          id="page-1"
-          style={{
-            backgroundColor: "darkseagreen",
-          }}
-        >
+        <div data-anchor="header" id="page-1">
           <Header />
         </div>
         <div

@@ -20,9 +20,7 @@ export default function Layout({ children, home }) {
         <meta property="og:image" content={""} />
         <meta name="twitter:card" content="photo" />
       </Head>
-      <div className={styles.mainWrapper}>
-        <main>{children}</main>
-      </div>
+      <div className={styles.mainWrapper}>{children}</div>
     </>
   );
 }

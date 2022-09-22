@@ -1,4 +1,4 @@
-const VSCodeStyle = ({ text, type, href }) => {
+const VSCodeStyle = ({ type, text }) => {
   switch (type) {
     case "component":
       return (
@@ -7,6 +7,15 @@ const VSCodeStyle = ({ text, type, href }) => {
           <span style={{ color: "#34bcb0" }}>{text}</span>
           {` />`}
         </span>
+      );
+    // (1)const / (2)name / = {  }
+    case "Object":
+      return (
+        <>
+          <span style={{ color: "#3482b9" }}>{`${text[0]} `}</span>
+          <span style={{ color: "#69cdfb" }}>{text[1]}</span>
+          <span style={{ color: "#c9c785" }}>{` = {  }`}</span>
+        </>
       );
   }
 };
