@@ -1,0 +1,6 @@
+.myPhoto {
+  width: 250px;
+  height: calc(2473 / 1855 * 250px);
+  position: relative;
+  opacity: 0.75;
+}

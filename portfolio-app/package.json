@@ -21,6 +21,7 @@
   "devDependencies": {
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
+    "nodemon": "^2.0.20",
     "slick-carousel": "^1.8.1"
   }
 }
