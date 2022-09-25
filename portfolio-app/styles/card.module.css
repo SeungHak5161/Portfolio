@@ -2,7 +2,6 @@
   width: 400px;
   transform: translateX(calc((((80vw - 9rem) / 3) - 400px) / 2));
   border-radius: 10px;
-  background-color: beige;
 }
 .card {
   height: 60vh;
@@ -10,6 +9,7 @@
   border: 1px solid black;
   border-radius: 10px;
   margin-bottom: 1vw;
+  background-color: beige;
 }
 @media (max-width: 1650px) {
   .cardWrapper {
@@ -38,4 +38,5 @@
   align-items: center;
   border: 1px solid black;
   border-radius: 10px;
+  background-color: beige;
 }

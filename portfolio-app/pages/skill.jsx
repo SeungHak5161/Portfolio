@@ -6,7 +6,9 @@ import styles from "../styles/skill.module.css";
 export default function about({ aboutData }) {
   return (
     <Layout>
-      <div className={utilstyles.bold15X}>skill</div>
+      <section className={styles.mainWrapper}>
+        <div className={utilstyles.bold15X}>skill</div>
+      </section>
     </Layout>
   );
 }

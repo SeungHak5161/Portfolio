@@ -11,6 +11,7 @@ import VSCodeStyle from "../components/VSCodeStyle";
 
 // pages
 import Header from "./header";
+import About from "./about";
 import Project from "./project";
 import Skill from "./skill";
 import Footer from "./footer";
@@ -79,6 +80,9 @@ export default function Home() {
           <a href="#header" className={`${styles.navItem}`}>
             <VSCodeStyle text={"Header"} type={"component"} href={"/header"} />
           </a>
+          <a href="#about" className={`${styles.navItem}`}>
+            <VSCodeStyle text={"About"} type={"component"} href={"/about"} />
+          </a>
           <a href="#project" className={styles.navItem}>
             <VSCodeStyle
               text={"Project"}
@@ -100,58 +104,18 @@ export default function Home() {
         <div data-anchor="header" id="page-1">
           <Header />
         </div>
-        <div
-          data-anchor="project"
-          id="page-2"
-          style={{
-            backgroundColor: "peachpuff",
-          }}
-        >
+        <div data-anchor="about" id="page-2">
+          <About />
+        </div>
+        <div data-anchor="project" id="page-3">
           <Project />
         </div>
-        <div
-          data-anchor="skill"
-          id="page-3"
-          style={{
-            backgroundColor: "cornflowerblue",
-          }}
-        >
+        <div data-anchor="skill" id="page-4">
           <Skill />
         </div>
-        <div
-          data-anchor="footer"
-          id="page-4"
-          style={{
-            backgroundColor: "lightpink",
-          }}
-        >
+        <div data-anchor="footer" id="page-5">
           <Footer />
         </div>
-
-        {/* <div
-          className="linear-progress"
-          style={{
-            position: "fixed",
-            top: "0px",
-            left: "10px",
-            width: "calc(100vw - 20px)",
-            height: "2px",
-          }}
-        >
-          <div
-            className="bar"
-            style={{
-              position: "absolute",
-              top: "0",
-              left: "0",
-              width: "100%",
-              height: "100%",
-              backgroundColor: "#84e8ff",
-              transformOrigin: "0 0 0",
-            }}
-            ref={linearProgressBarRef}
-          ></div>
-        </div> */}
       </div>
     </>
   );
