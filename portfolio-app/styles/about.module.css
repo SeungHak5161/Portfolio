@@ -3,12 +3,54 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #46494d;
+  /* background-color: #46494d; */
+  background-color: #c5c5c5;
+}
+
+.aboutWrapper {
+  display: flex;
+  width: 700px;
+  justify-content: space-evenly;
+  padding: 30px 10px;
+  flex-wrap: wrap;
+}
+.title {
+  font-family: "Nanum Gothic", sans-serif;
+  width: 100%;
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.content {
+  font-family: "Nanum Gothic", sans-serif;
+  /* width: 80%; */
+  width: 65%;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding-top: 2rem;
+}
+
+.aboutCard {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  height: 80px;
+  margin: 0 20px;
+}
+.aboutCard .aboutLabel {
+  font-weight: 600;
+  width: 120px;
+  font-size: 1.2rem;
+}
+.aboutCard .aboutValue {
+  width: 120px;
 }
 
 .myPhoto {
   width: 250px;
   height: calc(2473 / 1855 * 250px);
   position: relative;
-  opacity: 0.75;
+  border-radius: 50%;
+  overflow: hidden;
 }
