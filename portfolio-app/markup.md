@@ -17,7 +17,5 @@ header 영역 측면에 표시
 
 - skill :
   기술명, 상세
-- footer :
-  contact(github, email)
 
 잔디 정리, readme.md 정리

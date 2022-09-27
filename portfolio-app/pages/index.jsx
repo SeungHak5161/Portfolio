@@ -93,9 +93,9 @@ export default function Home() {
               href={"/project"}
             />
           </a>
-          <a href="#footer" className={styles.navItem}>
+          {/* <a href="#footer" className={styles.navItem}>
             <VSCodeStyle text={"Footer"} type={"component"} href={"/footer"} />
-          </a>
+          </a> */}
         </div>
       </div>
 
@@ -113,9 +113,9 @@ export default function Home() {
         <div data-anchor="project" id="page-4">
           <Project />
         </div>
-        <div data-anchor="footer" id="page-5">
+        {/* <div data-anchor="footer" id="page-5">
           <Footer />
-        </div>
+        </div> */}
       </div>
     </>
   );
