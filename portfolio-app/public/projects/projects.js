@@ -1,32 +1,50 @@
 export const projects = [
   {
-    title: "TodoList",
-    image: "/images/김수영.jpg",
-    description: "api를 이용한 어쩌구",
+    title: "something",
+    image: "/images/project/something.gif",
+    description:
+      "React와 뭐시기 라이브러리를 사용하고 뭐에 신경쓴 무슨 프로젝트",
+    github: "github.com/seunghak5161/blabla",
+    demo: "demo.netlify.com",
   },
   {
-    title: "TodoList2",
-    image: "/images/김수영.jpg",
-    description: "api를 이용한 어쩌구",
+    title: "something",
+    image: "/images/project/something.gif",
+    description:
+      "React와 뭐시기 라이브러리를 사용하고 뭐에 신경쓴 무슨 프로젝트",
+    github: "github.com/seunghak5161/blabla",
+    demo: "demo.netlify.com",
   },
   {
-    title: "TodoList3",
-    image: "/images/김수영.jpg",
-    description: "api를 이용한 어쩌구",
+    title: "something",
+    image: "/images/project/something.gif",
+    description:
+      "React와 뭐시기 라이브러리를 사용하고 뭐에 신경쓴 무슨 프로젝트",
+    github: "github.com/seunghak5161/blabla",
+    demo: "demo.netlify.com",
   },
   {
-    title: "TodoList4",
-    image: "/images/김수영.jpg",
-    description: "api를 이용한 어쩌구",
+    title: "something",
+    image: "/images/project/something.gif",
+    description:
+      "React와 뭐시기 라이브러리를 사용하고 뭐에 신경쓴 무슨 프로젝트",
+    github: "github.com/seunghak5161/blabla",
+    demo: "demo.netlify.com",
   },
   {
-    title: "TodoList5",
-    image: "/images/김수영.jpg",
-    description: "api를 이용한 어쩌구",
+    title: "something",
+    image: "/images/project/something.gif",
+    description:
+      "React와 뭐시기 라이브러리를 사용하고 뭐에 신경쓴 무슨 프로젝트",
+    github: "github.com/seunghak5161/blabla",
+    demo: "demo.netlify.com",
   },
   {
-    title: "TodoList6",
-    image: "/images/김수영.jpg",
-    description: "api를 이용한 어쩌구",
+    title: "something",
+    image: "/images/project/something.gif",
+    description:
+      "React와 뭐시기 라이브러리를 사용하고 뭐에 신경쓴 무슨 프로젝트",
+    github: "github.com/seunghak5161/blabla",
+    demo: "demo.netlify.com",
   },
 ];

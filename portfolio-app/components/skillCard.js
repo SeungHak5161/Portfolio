@@ -12,15 +12,21 @@ export default function IntroCard({ label, value, src, alt }) {
             src={src}
             alt={alt}
             layout={"fixed"}
-            width={180}
-            height={180}
+            width={150}
+            height={150}
           />
         </div>
-        <ul>
-          {value.map((e, idx) => {
-            return <li key={idx}>{e}</li>;
-          })}
-        </ul>
+        <div className={styles.overlay}>
+          <ul className={styles.skillUl}>
+            {value.map((e, idx) => {
+              return (
+                <li className={styles.skillLi} key={idx}>
+                  {e}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );

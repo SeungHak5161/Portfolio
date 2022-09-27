@@ -83,15 +83,15 @@ export default function Home() {
           <a href="#about" className={`${styles.navItem}`}>
             <VSCodeStyle text={"About"} type={"component"} href={"/about"} />
           </a>
+          <a href="#skill" className={styles.navItem}>
+            <VSCodeStyle text={"Skill"} type={"component"} href={"/skill"} />
+          </a>
           <a href="#project" className={styles.navItem}>
             <VSCodeStyle
               text={"Project"}
               type={"component"}
               href={"/project"}
             />
-          </a>
-          <a href="#skill" className={styles.navItem}>
-            <VSCodeStyle text={"Skill"} type={"component"} href={"/skill"} />
           </a>
           <a href="#footer" className={styles.navItem}>
             <VSCodeStyle text={"Footer"} type={"component"} href={"/footer"} />
@@ -107,11 +107,11 @@ export default function Home() {
         <div data-anchor="about" id="page-2">
           <About />
         </div>
-        <div data-anchor="project" id="page-3">
-          <Project />
-        </div>
-        <div data-anchor="skill" id="page-4">
+        <div data-anchor="skill" id="page-3">
           <Skill />
+        </div>
+        <div data-anchor="project" id="page-4">
+          <Project />
         </div>
         <div data-anchor="footer" id="page-5">
           <Footer />

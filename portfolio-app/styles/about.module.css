@@ -3,48 +3,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #46494d; */
   background-color: #c5c5c5;
+  flex-direction: column;
 }
 
-.aboutWrapper {
-  display: flex;
-  width: 700px;
-  justify-content: space-evenly;
-  padding: 30px 10px;
-  flex-wrap: wrap;
-}
 .title {
   font-family: "Nanum Gothic", sans-serif;
   width: 100%;
   font-weight: 700;
   font-size: 2.2rem;
   text-align: center;
-  padding-bottom: 3rem;
+  text-shadow: 1px 1px 1px black;
 }
-.content {
-  font-family: "Nanum Gothic", sans-serif;
-  /* width: 80%; */
-  width: 65%;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  padding-top: 2rem;
+
+.aboutWrapper {
+  width: 950px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5rem 0 2rem;
+}
+
+.cardWrapper {
+  width: 700px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .aboutCard {
   display: flex;
   justify-content: space-between;
-  width: 200px;
-  height: 80px;
+  width: 250px;
+  height: 100px;
   margin: 0 20px;
 }
 .aboutCard .aboutLabel {
-  font-weight: 600;
-  width: 120px;
-  font-size: 1.2rem;
+  font-weight: 700;
+  width: 170px;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
 }
 .aboutCard .aboutValue {
-  width: 120px;
+  font-size: 1.1rem;
 }
 
 .myPhoto {
@@ -53,4 +54,24 @@
   position: relative;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+/* .divider {
+  width: 10rem;
+  height: 0.3rem;
+  border: none;
+  border-top: 0.3rem solid #43655a;
+  margin: 2rem 0;
+} */
+
+.content {
+  font-family: "Nanum Gothic", sans-serif;
+  width: 950px;
+  padding: 0 60px;
+  font-size: 1.3rem;
+  line-height: 1.7;
 }

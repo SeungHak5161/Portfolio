@@ -4,7 +4,6 @@ import styles from "../styles/card.module.css";
 import utilStyles from "../styles/utils.module.css";
 
 export default function projectCard({ project }) {
-  // console.log(project);
   return (
     <>
       <div className={styles.cardWrapper}>

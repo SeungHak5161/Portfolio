@@ -3,9 +3,7 @@ import { useState, useEffect } from "react";
 // components
 import Layout from "../components/layout";
 import ProjectCard from "../components/projectCard";
-import VSCodeStyle from "../components/VSCodeStyle";
 // css
-import utilstyles from "../styles/utils.module.css";
 import styles from "../styles/project.module.css";
 // library
 import Slider from "react-slick";
@@ -77,7 +75,6 @@ export default function about({}) {
   return (
     <Layout>
       <section className={styles.mainWrapper}>
-        {/* <div className={utilstyles.bold15X}>project</div> */}
         <Slider {...settings} className={styles.swiperWrapper}>
           {/* {projectData.map((e) => {
             <projectCard project={e} />;
