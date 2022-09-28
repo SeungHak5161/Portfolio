@@ -9,4 +9,73 @@
 .swiperWrapper {
   width: 80%;
   height: calc(60vh + 1vh + 50px + 30px);
+  min-height: 550px;
+}
+
+.cardWrapper {
+  width: 400px;
+  transform: translateX(calc((((80vw - 9rem) / 3) - 400px) / 2));
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card {
+  height: 60vh;
+  min-height: 500px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 1vw;
+  background-color: #cdd8e1;
+}
+@media (max-width: 1750px) {
+  .cardWrapper {
+    transform: translateX(calc((((80vw - 9rem) / 2) - 400px) / 2));
+  }
+}
+@media (max-width: 1250px) {
+  .cardWrapper {
+    transform: translateX(calc(((80vw - 9rem) - 400px) / 2));
+  }
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  height: calc(400 / 1920 * 966px);
+}
+
+.cardContent {
+  padding: 15px;
+  border-top: 1px solid gray;
+}
+
+.cardTitle {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  color: rgb(90, 90, 90);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.detailUl {
+  margin: 10px;
+}
+
+.detailLi {
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+.links {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #cdd8e1;
 }

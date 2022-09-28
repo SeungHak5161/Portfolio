@@ -50,7 +50,7 @@ export default function about({}) {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1650,
+        breakpoint: 1750,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -59,7 +59,7 @@ export default function about({}) {
         },
       },
       {
-        breakpoint: 1150,
+        breakpoint: 1250,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -76,15 +76,10 @@ export default function about({}) {
     <Layout>
       <section className={styles.mainWrapper}>
         <Slider {...settings} className={styles.swiperWrapper}>
-          {/* {projectData.map((e) => {
-            <projectCard project={e} />;
-          })} */}
           <ProjectCard project={projectData[0]} />
           <ProjectCard project={projectData[1]} />
           <ProjectCard project={projectData[2]} />
           <ProjectCard project={projectData[3]} />
-          <ProjectCard project={projectData[4]} />
-          <ProjectCard project={projectData[5]} />
         </Slider>
       </section>
     </Layout>

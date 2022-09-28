@@ -1,7 +1,6 @@
 import Image from "next/image";
 // css
-import styles from "../styles/card.module.css";
-import utilStyles from "../styles/utils.module.css";
+import styles from "../styles/project.module.css";
 
 export default function projectCard({ project }) {
   return (
@@ -9,13 +8,26 @@ export default function projectCard({ project }) {
       <div className={styles.cardWrapper}>
         <div className={styles.card}>
           <div className={styles.cardImage}>
-            {/* <Image src={project.image} layout="fill" objectFit="cover"></Image> */}
+            {project.image ? (
+              <Image
+                src={project.image}
+                layout="fill"
+                objectFit="cover"
+              ></Image>
+            ) : null}
           </div>
           <div className={styles.cardContent}>
-            <span className={`${utilStyles.bold12X} ${styles.cardTitle}`}>
-              {project.title}
-            </span>
-            <p>{project.description}</p>
+            <p className={styles.cardTitle}>{project.title}</p>
+            <p className={styles.cardDescription}>{project.description}</p>
+            <ul className={styles.detaillUl}>
+              {project.detail.map((e, idx) => {
+                return (
+                  <li className={styles.detailLi} key={idx}>
+                    {e}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
         <div className={styles.links}>
