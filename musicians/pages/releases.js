@@ -1,9 +1,6 @@
-import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 // css
 import styles from "../styles/releases.module.css";
-import utilStyles from "../styles/utils.module.css";
 // component
 import Layout from "../components/layout";
 // library
