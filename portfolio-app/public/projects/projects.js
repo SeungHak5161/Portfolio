@@ -2,11 +2,15 @@ export const projects = [
   {
     title: "Portfolio-Page",
     image: "/projects/portfolio.gif",
-    description: "포트폴리오 페이지",
-    detail: [""],
+    description: "제 소개를 위한 포트폴리오 페이지입니다.",
+    detail: [
+      "React 기반으로 페이지를 제작했습니다.",
+      "여러 효과들을 JS를 이용해 직접 구현했습니다.",
+      "Pageable, swiper 등을 사용했습니다.",
+    ],
     github:
       "https://github.com/SeungHak5161/Portfolio/tree/master/portfolio-app",
-    demo: "",
+    demo: "https://portfolio-seunghak.vercel.app/",
   },
   {
     title: "Favorite-Musicians",
