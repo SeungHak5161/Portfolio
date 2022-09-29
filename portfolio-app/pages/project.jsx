@@ -80,6 +80,7 @@ export default function about({}) {
           <ProjectCard project={projectData[1]} />
           <ProjectCard project={projectData[2]} />
           <ProjectCard project={projectData[3]} />
+          <ProjectCard project={projectData[4]} />
         </Slider>
       </section>
     </Layout>

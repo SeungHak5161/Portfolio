@@ -10,7 +10,7 @@ export default function about({}) {
     <Layout>
       <section className={styles.mainWrapper}>
         <div className={styles.title}>
-          "사용자 경험을 중요시하는 개발자 백승학입니다!"
+          &quot;사용자 경험을 중요시하는 개발자 백승학입니다!&quot;
         </div>
         <hr className={styles.divider} />
         <div className={styles.aboutWrapper}>
@@ -57,7 +57,8 @@ export default function about({}) {
 
           <div className={styles.myPhoto}>
             <Image
-              src={"/images/증명사진.jpg"}
+              src={"/images/myphoto.jpg"}
+              alt={"증명사진"}
               layout="fill"
               objectFit="contain"
               className={styles.img}

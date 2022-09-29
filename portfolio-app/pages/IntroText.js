@@ -6,20 +6,17 @@ export default function IntroText() {
       <span style={{ color: "#3482b9" }}>{`const `}</span>
       <span style={{ color: "#69cdfb" }}>{"SeungHak"}</span>
       <span style={{ color: "#c9c785" }}>{` = { `}</span>
-      <div style={{ position: "relative", left: "2rem" }}>{content()}</div>
+      <div style={{ position: "relative", left: "2rem" }}>{useContent()}</div>
       <span style={{ color: "#c9c785" }}>{` }`}</span>
     </>
   );
 }
-function content() {
+function useContent() {
   useEffect(() => {
     typing();
   }, []);
 
   const [html, setHtml] = useState(``);
-  // useEffect(() => {
-  //   console.log(html);
-  // }, [html]);
 
   const color = {
     orange: "be5c2d",

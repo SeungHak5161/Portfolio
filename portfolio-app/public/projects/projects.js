@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: "Portfolio-Page",
+    image: "/projects/portfolio.gif",
+    description: "포트폴리오 페이지",
+    detail: [""],
+    github:
+      "https://github.com/SeungHak5161/Portfolio/tree/master/portfolio-app",
+    demo: "",
+  },
+  {
     title: "Favorite-Musicians",
     image: "/projects/musicians.gif",
     description: "Next.js 핵심개념들을 적용한 가수 소개 사이트입니다.",

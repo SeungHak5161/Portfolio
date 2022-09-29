@@ -11,6 +11,7 @@ export default function projectCard({ project }) {
             {project.image ? (
               <Image
                 src={project.image}
+                alt={project.title}
                 layout="fill"
                 objectFit="cover"
               ></Image>

@@ -1,8 +1,7 @@
 import Layout from "../components/layout";
 // css
-import utilstyles from "../styles/utils.module.css";
 import styles from "../styles/header.module.css";
-import IntroText from "../components/introText";
+import IntroText from "./IntroText";
 
 export default function about() {
   return (

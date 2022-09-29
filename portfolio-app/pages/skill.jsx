@@ -54,7 +54,7 @@ export default function about() {
           <SkillCard
             label={"React"}
             value={["React 생명주기 이해", "각종 Hook 사용"]}
-            src={"/images/React.png"}
+            src={"/images/react.png"}
           />
           <SkillCard
             label={"Next.js"}
