@@ -1,7 +1,4 @@
 import { useRef, useEffect } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 // css
 import styles from "../styles/Home.module.css";
 import utilStyles from "../styles/utils.module.css";
@@ -19,7 +16,6 @@ import Footer from "./footer";
 export default function Home() {
   const containerRef = useRef(null);
   const pageableRef = useRef(null);
-  const linearProgressBarRef = useRef(null);
 
   const $navbar = useRef({ activeNow: null });
 
