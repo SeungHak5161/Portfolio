@@ -1,0 +1,12 @@
+{
+  "name": "shortsRemover",
+  "description": "remove youtube shorts area in trendings",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/feed/trending"],
+      "js": ["index.js"]
+    }
+  ]
+}
