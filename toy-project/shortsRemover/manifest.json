@@ -5,7 +5,7 @@
   "manifest_version": 3,
   "content_scripts": [
     {
-      "matches": ["https://www.youtube.com/feed/trending"],
+      "matches": ["https://www.youtube.com/feed/trending*"],
       "js": ["index.js"]
     }
   ]
