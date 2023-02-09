@@ -1,11 +1,11 @@
-import styles from "../styles/component.module.css";
-import utilStyles from "../styles/utils.module.css";
-import { mapping, SH, WJ, JS, TG } from "../data/data.js";
-import { Image } from "next/image";
+import styles from "styles/component.module.css";
+import utilStyles from "styles/utils.module.css";
+import { mapping, SH, WJ, JS, TG } from "data/data.js";
+// import { Image } from "next/image";
 
 import { useEffect, useState } from "react";
 
-export default function RankingTable({ data }) {
+export default function RankingTable ({ data }) {
   const [shCorrect, setShCorrect] = useState(0);
   const [wjCorrect, setWjCorrect] = useState(0);
   const [jsCorrect, setJsCorrect] = useState(0);
@@ -17,7 +17,6 @@ export default function RankingTable({ data }) {
     let js = 0;
     let tg = 0;
     for (let i = 0; i < data.length; i++) {
-      // console.log(data[i].name, SH[i].name);
       if (data[i].name === SH[i].name) {
         sh++;
       }

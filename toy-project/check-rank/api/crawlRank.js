@@ -1,7 +1,10 @@
-export default async function eplRank({ id, option }) {
+export default async function eplRank ({ id, option }) {
   const url =
-    "https://cors-proxy-sh.herokuapp.com/https://api.football-data.org/v4/";
-  const headers = { "X-Auth-Token": "d9760c70f8ab4cd8a93883383c336793" };
+    "https://proxy.cors.sh/https://api.football-data.org/v4/";
+  const headers = {
+    'x-cors-api-key': 'temp_b459f87636132d730c8d240c60fdb7ba',
+    "X-Auth-Token": "d9760c70f8ab4cd8a93883383c336793"
+  };
 
   /** get foot-ball data */
   const fetching = async ({ others }) => {
@@ -12,22 +15,22 @@ export default async function eplRank({ id, option }) {
     try {
       const res = await fetch(myRequest);
       console.log("try to fetch");
-      if (!res.ok) {
-        console.log("res is not ok");
-        throw new Error("Response Error");
-      } else {
+      if (res.ok) {
         console.log("res is ok");
         return res.json();
+      } else {
+        console.log("res is not ok");
+        throw new Error("Response Error");
       }
     } catch (err) {
-      alert(err);
+      console.log(err)
     }
   };
 
   switch (option) {
     case "standings":
       const res = await fetching({ others: "standings" });
-      const standings = res.standings[0].table;
+      const standings = res?.standings[0].table;
       const teamRank = [];
       for (let i in standings) {
         const dict = {
