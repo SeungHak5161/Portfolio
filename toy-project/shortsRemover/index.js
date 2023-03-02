@@ -1,28 +1,17 @@
-// window.onload = () => {
+// window.addEventListener('load', () => {
+//   console.log('dom loaded')
 //   // const target = document.getElementsByTagName('ytd-item-section-renderer')[1];
-//   const elem = document.getElementsByClassName('ytd-reel-shelf-renderer')[0]
-//   const target = elem.parentNode;
+//   const elem = document.getElementsByTagName('ytd-reel-shelf-renderer')
 //   if (elem) {
-//     console.log('remove shorts')
-//     target.parentNode.removeChild(target)
-//   } else {
-//     setTimeout(() => {
-//       const elem = document.getElementsByClassName('ytd-reel-shelf-renderer')[0]
-//       const target = elem.parentNode;
-//       console.log('delayed remove')
-//       target.parentNode.removeChild(target)
-//     }, 3000);
+//     console.log(elem)
+//     elem.parentNode.removeChild(elem)
 //   }
-// }
+// })
 
 const timeOut = setInterval(() => {
-  const elem = document.getElementsByClassName('ytd-reel-shelf-renderer')[0]
-  if (elem) {
-    const target = elem.parentNode
-    console.log('remove shorts')
-    target.parentNode.removeChild(target)
-    clearInterval(timeOut)
-  } else {
-    console.log('shorts not found')
+  const target = document.getElementsByTagName('ytd-reel-shelf-renderer')
+  if (target.length !== 0) {
+    target[0].remove()
+    // clearInterval(timeOut)
   }
 }, 100);
